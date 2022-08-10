@@ -180,7 +180,7 @@ const Home: NextPage<Props> = ({ posts }) => {
             </div>
           )}
         </section>
-        <section>
+        <section className={styles.techs}>
           <h2
             className={
               !isLightMode

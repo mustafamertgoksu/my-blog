@@ -150,6 +150,28 @@
   }
 }
 
+.techs {
+  @apply px-24
+}
+
+@media(max-width: 620px) {
+  .techs {
+    @apply px-10
+  }
+}
+
+@media(max-width: 500px) {
+  .techs {
+    @apply px-4
+  }
+}
+
+@media(max-width: 410px) {
+  .techs {
+    @apply px-1
+  }
+}
+
 .posts {
   @apply w-full flex flex-col items-center my-12
 }
@@ -163,9 +185,9 @@
 }
 
 .postCard {
-  @apply cursor-pointer flex flex-col bg-slate-900 px-4 py-3 w-80 opacity-90 hover:opacity-80 my-2
+  @apply cursor-pointer flex flex-col items-center justify-center bg-neutral-900 px-2 py-1 w-96 h-24 opacity-60 hover:opacity-70 my-2 rounded
 }
 
 .lightPostCard {
-  @apply cursor-pointer flex flex-col bg-slate-900 px-4 py-3 w-80 opacity-90 hover:opacity-80 my-2
+  @apply cursor-pointer flex flex-col items-center justify-center bg-slate-900 px-2 py-1 w-96 h-24 opacity-90 hover:opacity-80 my-2 rounded
 }
