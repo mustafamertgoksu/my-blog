@@ -36,7 +36,7 @@ const Navbar = () => {
       }
     >
       <div className={styles.hiddenNavLeft}>
-        <button onClick={toggleNav}>
+        <button onClick={toggleNav} aria-label="toggleNav">
           <HiMenuAlt1
             className={isLightMode ? styles.lightNavIcon : styles.navIcon}
           />

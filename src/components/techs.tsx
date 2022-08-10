@@ -40,7 +40,7 @@ const Techs = () => {
             className={!isLightMode ? styles.techCard : styles.lightTechCard}
             key={index}
           >
-            <Image src={tech.image} width="30" height="30" />
+            <Image src={tech.image} width="30" height="30" alt={tech.name} />
             <span className={!isLightMode ? styles.techName : styles.lightTechName}>
               {tech.name}
             </span>

@@ -15,13 +15,6 @@ export const datas: Datas = {
     "I'm a student and frontend developer in Turkey. I love making software. I like playing chess and solving cube. I'm currently studying to get a good high school ",
 };
 
-type Tech = {
-  name: string;
-  image: string;
-  color: string;
-  dark: boolean;
-}
-
 export const TechsIcons: any[] = [
   {
     name: 'HTML',

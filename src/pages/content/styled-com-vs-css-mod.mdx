@@ -10,18 +10,18 @@ import Head from 'next/head';
 import styles from '../../styles/mdx.module.css';
 
 <div className={styles.mdxContainer}>
-# <a className={styles.styledComponents}>Styled Components</a> vs <a className={styles.cssModules}>Css Modules</a>
-### In React, we can use <a className={styles.cssModules}>Css Modules</a> to create reusable CSS classes. However, we can also use <a className={styles.styledComponents}>Styled Components</a> to create our own components. The difference is that <a className={styles.styledComponents}>Styled Components</a> are written in JavaScript, while <a className={styles.cssModules}>Css Modules</a> are written in CSS. In this article, We will answer the question: Which one should I use?
+# <a target="blank" rel="noreferrer" href="https://styled-components.com/" className={styles.styledComponents}>Styled Components</a> vs <a className={styles.cssModules}>Css Modules</a>
+### In React, we can use <a target="blank" rel="noreferrer" href="https://github.com/css-modules/css-modules" className={styles.cssModules}>Css Modules</a> to create reusable CSS classes. However, we can also use <a className={styles.styledComponents} target="blank" rel="noreferrer" href="https://styled-components.com/">Styled Components</a> to create our own components. The difference is that <a className={styles.styledComponents}>Styled Components</a> are written in JavaScript, while <a target="blank" rel="noreferrer" href="https://github.com/css-modules/css-modules" className={styles.cssModules}>Css Modules</a> are written in CSS. In this article, We will answer the question: Which one should I use?
 
-### Technically, <a className={styles.cssModules}>Css Modules</a> transforms style names using a hash-based on the filename, path, style name. <a className={styles.styledComponents}>Styled Components</a> handles styles in JS runtime, adding them as they go to the head HTML section of the page.
+### Technically, <a target="blank" rel="noreferrer" href="https://github.com/css-modules/css-modules" className={styles.cssModules}>Css Modules</a> transforms style names using a hash-based on the filename, path, style name. <a className={styles.styledComponents} target="blank" rel="noreferrer" href="https://styled-components.com/">Styled Components</a> handles styles in JS runtime, adding them as they go to the head HTML section of the page.
 
-## Advantages and Disadvantages of <a className={styles.styledComponents}>Styled Components</a>
+## Advantages and Disadvantages of <a target="blank" rel="noreferrer" href="https://styled-components.com/" className={styles.styledComponents}>Styled Components</a>
 
 ## Advantages
 
 ### Reusable - just as the normal React components, you can make small reusable pieces of code and avoid code duplication. Typical use cases are buttons, tables, forms, etc.
 
-### Writing pure CSS - one of the biggest advantages of <a className={styles.styledComponents}>Styled Components</a> in comparison to other styling solutions in React. You don’t to use weird syntax and write the CSS as a JavaScript object. Inside the template literals, you write SCSS or plain CSS. You also avoid the hassle with the media queries - it’s straightforward, just as classic CSS.
+### Writing pure CSS - one of the biggest advantages of <a className={styles.styledComponents} target="blank" rel="noreferrer" href="https://styled-components.com/">Styled Components</a> in comparison to other styling solutions in React. You don’t to use weird syntax and write the CSS as a JavaScript object. Inside the template literals, you write SCSS or plain CSS. You also avoid the hassle with the media queries - it’s straightforward, just as classic CSS.
 
 ### Dynamic styling - By using props you can have dynamic values, which gives you a high level of flexibility by avoiding writing duplicated styles.
 
@@ -31,7 +31,7 @@ import styles from '../../styles/mdx.module.css';
 
 ### Better performance - The library is smart enough to keep track of the components rendered on a page and not load the styling for unused components. In big application, this may have a big impact on the performance in comparison to the “old school” styling where you load all the styles at once.
 
-### Nesting - You can use nested CSS in <a className={styles.styledComponents}>Styled Components</a>
+### Nesting - You can use nested CSS in <a target="blank" rel="noreferrer" href="https://styled-components.com/" className={styles.styledComponents}>Styled Components</a>
 
 ## Disadvantages
 
@@ -39,21 +39,21 @@ import styles from '../../styles/mdx.module.css';
 
 ### Browser will not start interpreting the styles until styled-components has parsed them and added them to the DOM, which slows down rendering.
 
-## Advantages and Disadvantages of <a className={styles.cssModules}>Css Modules</a>
+## Advantages and Disadvantages of <a target="blank" rel="noreferrer" href="https://github.com/css-modules/css-modules" className={styles.cssModules}>Css Modules</a>
 
 ## Advantages
 
-### Using <a className={styles.cssModules}>Css Modules</a> avoid namespace collision for CSS classes
+### Using <a target="blank" rel="noreferrer" href="https://github.com/css-modules/css-modules" className={styles.cssModules}>Css Modules</a> avoid namespace collision for CSS classes
 
 ### You can use the same CSS class in multiple CSS files
 
 ### You can confidently update any CSS file without worrying about affecting other pages
 
-### Using <a className={styles.cssModules}>Css Modules</a> generates random CSS classes when displayed in the browser
+### Using <a target="blank" rel="noreferrer" href="https://github.com/css-modules/css-modules" className={styles.cssModules}>Css Modules</a> generates random CSS classes when displayed in the browser
 
-### <a className={styles.cssModules}>Css Modules</a> are easier to maintain and understand
+### <a target="blank" rel="noreferrer" href="https://github.com/css-modules/css-modules" className={styles.cssModules}>Css Modules</a> are easier to maintain and understand
 
-### <a className={styles.cssModules}>Css Modules</a> is is performant and faster than Styled Components
+### <a target="blank" rel="noreferrer" href="https://github.com/css-modules/css-modules" className={styles.cssModules}>Css Modules</a> is is performant and faster than Styled Components
 
 ## Disadvantages
 
@@ -61,7 +61,7 @@ import styles from '../../styles/mdx.module.css';
 
 ### You have to use styles object whenever constructing a className.
 
-### Mixing <a className={styles.cssModules}>Css Modules</a> and global CSS classes is cumbersome.
+### Mixing <a target="blank" rel="noreferrer" href="https://github.com/css-modules/css-modules" className={styles.cssModules}>Css Modules</a> and global CSS classes is cumbersome.
 
 ### Reference to an undefined CSS Module resolves to undefined without a warning
 
