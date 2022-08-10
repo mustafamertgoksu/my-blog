@@ -1,0 +1,31 @@
+.mdxContainer {
+  @apply w-full flex flex-col items-center my-5
+}
+
+.mdxContainer h1 {
+  @apply text-3xl font-bold text-center mb-5 text-gray-600
+}
+
+.mdxContainer h2 {
+  @apply text-2xl font-bold text-center mb-5 text-gray-500
+}
+
+.mdxContainer h3 {
+  @apply text-xl font-bold text-center mb-5 text-gray-700
+}
+
+.mdxContainer h4 {
+  @apply text-lg font-bold text-center mb-5 text-blue-800 opacity-90
+}
+
+.mdxContainer a {
+  @apply cursor-pointer
+}
+
+.cssModules {
+  @apply text-blue-500
+}
+
+.styledComponents {
+  @apply text-red-500
+}

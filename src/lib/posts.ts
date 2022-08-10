@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
-const root = path.join(process.cwd(), 'src/pages/content/');
+const root = path.join(process.cwd(), 'src', 'pages', 'content');
 
 export const getPostMeta = (slug: any) => {
   const realSlug = slug.replace(/\.mdx$/, '');

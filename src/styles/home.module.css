@@ -151,5 +151,21 @@
 }
 
 .posts {
-  
+  @apply w-full flex flex-col items-center my-12
+}
+
+.postsTitle {
+  @apply flex text-3xl text-neutral-500 opacity-80 my-4
+}
+
+.lightPostsTitle {
+  @apply flex text-3xl text-black opacity-90 my-4
+}
+
+.postCard {
+  @apply cursor-pointer flex flex-col bg-slate-900 px-4 py-3 w-80 opacity-90 hover:opacity-80 my-2
+}
+
+.lightPostCard {
+  @apply cursor-pointer flex flex-col bg-slate-900 px-4 py-3 w-80 opacity-90 hover:opacity-80 my-2
 }

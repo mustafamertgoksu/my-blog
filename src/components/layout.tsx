@@ -40,7 +40,7 @@ const Layout: FC<Props> = ({ children }) => {
         onScroll={changeNavBackground}
       >
         <Navbar />
-        <main>{children}</main>
+        <main style={{width: '100%'}}>{children}</main>
         <Footer />
       </div>
     </>

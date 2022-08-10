@@ -1,21 +1,21 @@
-import type { NextPage } from "next";
-import { useEffect, useState } from "react";
-import { useTitle } from "../hooks/useTitle";
-import styles from "../styles/home.module.css";
-import { useToggleTheme } from "../hooks/useToggleTheme";
-import { datas } from "../datas";
-import axios from "axios";
-import { githubRepositoriesURL } from "../datas";
-import { AiFillStar } from "react-icons/ai";
-import { BsGithub } from "react-icons/bs";
-import ContentLoader from "react-content-loader";
-import { topProjects } from "../datas";
-import Image from "next/image";
-import Typewriter from "typewriter-effect";
-import TypewriterComponent from "typewriter-effect";
-import Techs from "../components/techs";
-import { getAllPosts } from "../lib/posts";
-import Link from "next/link";
+import type { NextPage } from 'next';
+import { useEffect, useState } from 'react';
+import { useTitle } from '../hooks/useTitle';
+import styles from '../styles/home.module.css';
+import { useToggleTheme } from '../hooks/useToggleTheme';
+import { datas } from '../datas';
+import axios from 'axios';
+import { githubRepositoriesURL } from '../datas';
+import { AiFillStar } from 'react-icons/ai';
+import { BsGithub } from 'react-icons/bs';
+import ContentLoader from 'react-content-loader';
+import { topProjects } from '../datas';
+import Image from 'next/image';
+import Typewriter from 'typewriter-effect';
+import TypewriterComponent from 'typewriter-effect';
+import Techs from '../components/techs';
+import { getAllPosts } from '../lib/posts';
+import Link from 'next/link';
 
 type Props = {
   posts: any;
@@ -24,7 +24,7 @@ type Props = {
 const Home: NextPage<Props> = ({ posts }) => {
   const { setTitle } = useTitle();
   const { theme } = useToggleTheme();
-  const isLightMode = theme === "light";
+  const isLightMode = theme === 'light';
   const [loading, setLoading] = useState(false);
   const [repos, setRepos] = useState([]);
   const searchRepos = async () => {
@@ -34,7 +34,7 @@ const Home: NextPage<Props> = ({ posts }) => {
     setRepos(res.data);
   };
   useEffect(() => {
-    setTitle("Home");
+    setTitle('Home');
     searchRepos();
   }, []);
   return (
@@ -56,8 +56,8 @@ const Home: NextPage<Props> = ({ posts }) => {
           <h2
             className={
               !isLightMode
-                ? "my-5 text-2xl text-green-600"
-                : "my-5 text-2xl text-green-900"
+                ? 'my-5 text-2xl text-green-600'
+                : 'my-5 text-2xl text-green-900'
             }
           >
             Who Am I?
@@ -71,8 +71,8 @@ const Home: NextPage<Props> = ({ posts }) => {
         <h2
           className={
             isLightMode
-              ? "text-center text-black text-2xl"
-              : "text-center text-white text-2xl"
+              ? 'text-center text-black text-2xl'
+              : 'text-center text-white text-2xl'
           }
         >
           Top Projects
@@ -139,16 +139,16 @@ const Home: NextPage<Props> = ({ posts }) => {
                   <div
                     className={
                       isLightMode
-                        ? "bg-zinc-900 my-4 rounded flex flex-col justify-center h-48"
-                        : "bg-black opacity-60 my-4 rounded flex flex-col justify-center h-48 border-2 border-slate-500 hover:border-white"
+                        ? 'bg-zinc-900 my-4 rounded flex flex-col justify-center h-48'
+                        : 'bg-black opacity-60 my-4 rounded flex flex-col justify-center h-48 border-2 border-slate-500 hover:border-white'
                     }
                   >
                     <header className="flex justify-between px-4">
                       <span
                         className={
                           isLightMode
-                            ? "text-xl text-green-600"
-                            : "text-xl text-green-700"
+                            ? 'text-xl text-green-600'
+                            : 'text-xl text-green-700'
                         }
                       >
                         {repo.name}
@@ -158,8 +158,8 @@ const Home: NextPage<Props> = ({ posts }) => {
                     <main
                       className={
                         isLightMode
-                          ? "px-6 py-4 text-blue-500"
-                          : "px-6 py-4 text-blue-500"
+                          ? 'px-6 py-4 text-blue-500'
+                          : 'px-6 py-4 text-blue-500'
                       }
                     >
                       {repo.description}
@@ -180,12 +180,12 @@ const Home: NextPage<Props> = ({ posts }) => {
             </div>
           )}
         </section>
-        <section className={styles.skills}>
+        <section>
           <h2
             className={
               !isLightMode
-                ? "text-gray-50 opacity-50 text-center text-3xl my-4"
-                : "text-neutral-900 text-center text-3xl my-4"
+                ? 'text-gray-50 opacity-50 text-center text-3xl my-4'
+                : 'text-neutral-900 text-center text-3xl my-4'
             }
           >
             Technologies i use
@@ -193,10 +193,31 @@ const Home: NextPage<Props> = ({ posts }) => {
           <Techs />
         </section>
         <section className={styles.posts}>
+          <h2
+            className={
+              !isLightMode ? styles.postsTitle : styles.lightPostsTitle
+            }
+          >
+            Recent Posts
+          </h2>
           {posts.map((post: any, index: any) => (
             <div key={index}>
               <Link href={`/content/${post.slug}`}>
-                <a>{post.title}</a>
+                <div
+                  className={
+                    !isLightMode ? styles.postCard : styles.lightPostCard
+                  }
+                  onClick={() => setTitle(post.title)}
+                >
+                  <div className="flex">
+                    <Image src={post.image} alt={post.title} width="30" height="30" />
+                    <a className="text-white mx-3">{post.title}</a>
+                  </div>
+                  <div className="flex justify-center">
+                    <h3 className="text-center text-white">Date: &nbsp;</h3>
+                    <h4 className="text-center text-green-600">{post.date}</h4>
+                  </div>
+                </div>
               </Link>
             </div>
           ))}
