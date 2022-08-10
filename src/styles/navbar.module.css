@@ -1,0 +1,112 @@
+.navbar {
+  @apply w-full h-14 py-4 flex items-center justify-evenly sticky top-0 bg-transparent;
+  z-index: 999;
+}
+
+.lightNavbar {
+  @apply w-full h-14 py-4 flex items-center justify-evenly sticky top-0 bg-transparent;
+  z-index: 999;
+}
+
+.scrolledNav {
+  @apply w-full h-14 py-4 flex items-center justify-evenly sticky top-0 bg-zinc-900;
+    z-index: 999;
+}
+
+.scrolledLightNavbar {
+  @apply w-full h-14 py-4 flex items-center justify-evenly sticky top-0 bg-gray-200;
+    z-index: 999;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    @apply justify-around;
+  }
+  .lightNavbar {
+    @apply justify-around;
+  }
+  .scrolledNav {
+    @apply justify-around;
+  }
+  .scrolledLightNavbar {
+    @apply justify-around;
+  }
+}
+
+.navLeft {
+  @apply flex items-center;
+}
+
+@media (max-width: 768px) {
+  .navleft {
+    display: none;
+  }
+}
+
+.navRight {
+  @apply flex items-center;
+}
+
+.hiddenNavLeft {
+  @apply hidden;
+}
+
+@media(max-width: 768px) {
+  .hiddenNavLeft {
+    @apply flex flex-col justify-center;
+  }
+}
+
+.siteTitle {
+  @apply text-white font-bold text-xl mr-4;
+}
+
+.lightSiteTitle {
+  @apply text-black font-bold text-xl mr-4
+}
+
+.navList {
+  @apply flex;
+}
+
+.navLink {
+  @apply text-white mx-2 px-4 py-3 opacity-90 transition-all hover:bg-neutral-800 rounded;
+}
+
+.lightNavLink {
+  @apply text-black mx-2 px-4 py-3 opacity-90 transition-all hover:bg-gray-300 rounded hover:text-black;
+}
+
+.navLink:hover {
+  border-bottom: 1px solid #ccc;
+  @apply opacity-60;
+}
+
+.lightNavLink:hover {
+  border-bottom: 1px solid #222;
+  @apply opacity-60;
+}
+
+.modeToggleBtn {
+  @apply bg-amber-300 px-2 py-2 rounded text-xl
+}
+
+.lightModeToggleBtn {
+  @apply bg-black opacity-90 px-2 py-2 rounded text-xl text-white
+}
+
+.navIcon {
+  @apply text-white cursor-pointer text-3xl
+}
+
+.lightNavIcon {
+  @apply cursor-pointer text-3xl
+}
+
+.hiddenNav {
+  @apply hidden;
+}
+
+.showNav {
+  @apply flex flex-col bg-zinc-900 px-10 py-6 text-white rounded absolute left-4 top-16;
+}

@@ -1,0 +1,27 @@
+.footerText {
+  @apply text-center text-white cursor-default select-none mb-5 font-bold;
+}
+
+.lightFooterText {
+  @apply text-center text-black cursor-default select-none mb-5 font-bold;
+}
+
+.spanFirst {
+  @apply text-blue-500;
+}
+
+.spanSecond {
+  @apply text-green-500 cursor-pointer;
+}
+
+.lightSpanSecond {
+  @apply text-green-900 cursor-pointer
+}
+
+.spanThird {
+  @apply text-blue-700 cursor-pointer;
+}
+
+.lightSpanThird {
+  @apply text-blue-900 cursor-pointer;
+}

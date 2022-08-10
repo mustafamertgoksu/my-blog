@@ -1,0 +1,155 @@
+.main {
+  @apply py-8 w-full h-full
+}
+
+.aboutSection {
+  @apply w-full flex flex-col items-center my-12;
+}
+
+.aboutCard {
+  @apply bg-gray-900 w-80 h-72 text-[1.325rem] rounded px-8 py-5 text-white opacity-40 transition-all
+}
+
+.lightAboutCard {
+  @apply bg-gray-900 w-80 h-72 text-[1.325rem] rounded px-8 py-5 text-white opacity-90 transition-all
+}
+
+/* About Card Animation */
+
+.aboutCard::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-transition: none;
+  -moz-transition: none;
+  transition: none;
+}
+
+.aboutCard:hover::after {
+  width: 120%;
+  background-color: rgba(255, 255, 255, 0);
+
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.aboutCard:hover {
+  @apply bg-gray-900 w-80 h-72 rounded px-8 py-5 text-white opacity-60 scale-110
+}
+
+.lightAboutCard::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-transition: none;
+  -moz-transition: none;
+  transition: none;
+}
+
+.lightAboutCard:hover::after {
+  width: 120%;
+  background-color: rgba(255, 255, 255, 0);
+
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.lightAboutCard:hover {
+  @apply bg-gray-900 w-80 h-72 rounded px-8 py-5 text-white opacity-95 scale-110
+}
+
+@media(max-width: 768px) {
+  .aboutCard {
+    @apply bg-gray-900 w-72 h-60 rounded px-8 py-5 text-white opacity-50 scale-110 text-base
+  }
+
+  .aboutCard:hover {
+    @apply bg-gray-900 w-72 h-60 rounded px-8 py-5 text-white opacity-90 scale-110
+  }
+
+  .lightAboutCard {
+    @apply w-72 h-60 text-base scale-110
+  }
+
+  .lightAboutCard:hover {
+    @apply w-72 h-60
+  }
+}
+
+.project {
+  cursor: pointer;
+}
+
+.lightProject {
+  cursor: pointer;
+}
+
+@media(max-width: 620px) {
+  .project div {
+    width: 80%;
+    margin: 1rem auto;
+  }
+
+  .lightProject div {
+    width: 80%;
+    margin: 1rem auto;
+  }
+}
+
+.siteTitle {
+  @apply flex text-3xl text-neutral-500 opacity-70
+}
+
+.lightSiteTitle {
+  @apply flex text-3xl text-black opacity-90
+}
+
+@media(max-width: 768px) {
+  .siteTitle {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .lightSiteTitle {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media(max-width: 400px) {
+  .siteTitle {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+  }
+
+  .lightSiteTitle {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+  }
+}
+
+@media(max-width: 345px) {
+  .siteTitle {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+  }
+
+  .lightSiteTitle {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+  }
+}
+
+.posts {
+  
+}
