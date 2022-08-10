@@ -1,0 +1,12 @@
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/404": "pages/404.html",
+  "/about": "pages/about.html",
+  "/content/nestjs": "pages/content/nestjs.html",
+  "/projects": "pages/projects.html",
+  "/travel": "pages/travel.html",
+  "/": "pages/index.js",
+  "/_document": "pages/_document.js",
+  "/content/styled-com-vs-css-mod": "pages/content/styled-com-vs-css-mod.html"
+}
