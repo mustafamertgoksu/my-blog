@@ -137,7 +137,7 @@ export const SocialLinks: object[] = [
   },
 ];
 
-export const githubRepositoriesURL =
+export const githubRepositoriesURL: string =
   'https://api.github.com/users/mustafamertgoksu/repos';
 
 interface Discussion {
