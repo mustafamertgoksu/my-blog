@@ -3,15 +3,15 @@
 }
 
 .mdxContainer h1 {
-  @apply text-3xl font-bold text-center mb-5 text-gray-600
+  @apply text-3xl font-bold text-center mb-5 text-gray-400
 }
 
 .mdxContainer h2 {
-  @apply text-2xl font-bold text-center mb-5 text-gray-500
+  @apply text-2xl font-bold text-center mb-5 text-gray-400
 }
 
 .mdxContainer h3 {
-  @apply text-xl font-bold text-center mb-5 text-gray-700
+  @apply text-xl font-bold text-center mb-5 text-gray-400
 }
 
 .mdxContainer h4 {
