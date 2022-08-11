@@ -51,14 +51,6 @@ const Layout: FC<Props> = ({ children }) => {
       >
         <Navbar />
         <Main>{children}</Main>
-        <button
-          onClick={() =>
-            window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
-          }
-          className="text-2xl my-8 text-white"
-        >
-          Scroll
-        </button>
         <Footer />
       </div>
     </>
