@@ -53,7 +53,7 @@
 }
 
 .postCard {
-  @apply cursor-pointer flex flex-col items-center justify-center bg-[#111]  px-2 py-1 w-96 h-24 opacity-70 hover:opacity-70 my-2 rounded
+  @apply cursor-pointer flex flex-col items-center justify-center bg-[#111]  px-2 py-1 w-96 h-24 opacity-80 hover:opacity-95 my-2 rounded
 }
 
 .lightPostCard {

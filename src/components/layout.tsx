@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 import Navbar from './navbar';
 import Footer from './footer';
 import Head from 'next/head';
@@ -22,7 +22,7 @@ const Layout: FC<Props> = ({ children }) => {
   const { title } = useTitle();
   const { theme } = useToggleTheme();
   const isLightMode = theme === 'light';
-  const { setNavScroll } = useContext(NavbarContext);
+  const { setNavScroll, setNavVisibility } = useContext(NavbarContext);
 
   const changeNavBackground = (e: any) => {
     if (e.currentTarget.scrollTop >= 80) {
@@ -31,6 +31,10 @@ const Layout: FC<Props> = ({ children }) => {
       setNavScroll(false);
     }
   };
+
+  useEffect(() => {
+    setNavVisibility(false);
+  }, [title])
 
   return (
     <>
@@ -47,6 +51,14 @@ const Layout: FC<Props> = ({ children }) => {
       >
         <Navbar />
         <Main>{children}</Main>
+        <button
+          onClick={() =>
+            window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+          }
+          className="text-2xl my-8 text-white"
+        >
+          Scroll
+        </button>
         <Footer />
       </div>
     </>
