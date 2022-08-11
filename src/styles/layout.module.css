@@ -4,6 +4,6 @@
 }
 
 .lightWrapper {
-  @apply h-full w-full bg-gray-100 opacity-[0.96] flex flex-col items-center overflow-auto;
+  @apply h-full w-full bg-slate-100 opacity-[0.96] flex flex-col items-center overflow-auto;
     font-family: 'Montserrat', sans-serif;
 }

@@ -8,10 +8,15 @@ import { datas } from '../datas/index';
 import { useToggleTheme } from '../hooks/useToggleTheme';
 import { NavbarContext } from '../context/navbar.context';
 import { useContext } from 'react';
+import styled from 'styled-components';
 
 type Props = {
   children: React.ReactNode;
 };
+
+export const Main = styled.main`
+  width: 100%;
+`;
 
 const Layout: FC<Props> = ({ children }) => {
   const { title } = useTitle();
@@ -41,7 +46,7 @@ const Layout: FC<Props> = ({ children }) => {
         onScroll={changeNavBackground}
       >
         <Navbar />
-        <main style={{ width: '100%' }}>{children}</main>
+        <Main>{children}</Main>
         <Footer />
       </div>
     </>

@@ -16,6 +16,7 @@ import TypewriterComponent from 'typewriter-effect';
 import Techs from '../components/techs';
 import { getAllPosts } from '../lib/posts';
 import Link from 'next/link';
+import aboutStyles from '../styles/about.module.css';
 
 type Props = {
   posts: any;
@@ -38,11 +39,10 @@ const Home: NextPage<Props> = ({ posts }) => {
     searchRepos();
   }, []);
   return (
-    <>
-      <main className={styles.main}>
-        <section className={styles.aboutSection}>
+      <div className="container">
+        <section className={aboutStyles.aboutSection}>
           <h2
-            className={!isLightMode ? styles.siteTitle : styles.lightSiteTitle}
+            className={!isLightMode ? aboutStyles.siteTitle : aboutStyles.lightSiteTitle}
           >
             👋 Hey, {"I'm  "}
             <div className="mx-2">
@@ -63,7 +63,7 @@ const Home: NextPage<Props> = ({ posts }) => {
             Who Am I?
           </h2>
           <div
-            className={!isLightMode ? styles.aboutCard : styles.lightAboutCard}
+            className={!isLightMode ? aboutStyles.aboutCard : aboutStyles.lightAboutCard}
           >
             {datas.aboutParagraph}
           </div>
@@ -227,8 +227,7 @@ const Home: NextPage<Props> = ({ posts }) => {
             </div>
           ))}
         </section>
-      </main>
-    </>
+      </div>
   );
 };
 

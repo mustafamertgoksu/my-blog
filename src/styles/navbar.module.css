@@ -9,7 +9,7 @@
 }
 
 .scrolledNav {
-  @apply w-full h-14 py-4 flex items-center justify-evenly sticky top-0 bg-black opacity-95;
+  @apply w-full h-14 py-4 flex items-center justify-evenly sticky top-0 bg-zinc-900;
     z-index: 999;
 }
 
@@ -70,7 +70,7 @@
 }
 
 .navLink {
-  @apply text-white mx-2 px-4 py-3 opacity-90 transition-all hover:bg-neutral-700 rounded;
+  @apply text-white mx-2 px-4 py-3 opacity-90 transition-all hover:bg-slate-800 rounded;
 }
 
 .lightNavLink {
@@ -79,20 +79,20 @@
 
 .navLink:hover {
   border-bottom: 1px solid #ccc;
-  @apply opacity-60;
+  @apply opacity-70;
 }
 
 .lightNavLink:hover {
   border-bottom: 1px solid #222;
-  @apply opacity-60;
+  @apply opacity-70;
 }
 
 .modeToggleBtn {
-  @apply bg-amber-300 px-2 py-2 rounded text-xl
+  @apply bg-slate-300 px-2 py-2 rounded text-xl
 }
 
 .lightModeToggleBtn {
-  @apply bg-black opacity-90 px-2 py-2 rounded text-xl text-white
+  @apply bg-slate-900 px-2 py-2 rounded text-xl text-white
 }
 
 .navIcon {
