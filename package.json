@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next-sitemap",
     "start": "next start",
     "lint": "next lint"
   },
@@ -17,6 +17,8 @@
     "axios": "^0.27.2",
     "gray-matter": "^4.0.3",
     "next": "^12.2.4",
+    "next-pwa": "^5.5.5",
+    "next-sitemap": "^3.1.17",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.34.0",

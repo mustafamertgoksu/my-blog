@@ -1,5 +1,5 @@
-import nextMDX from "@next/mdx";
-import remarkFrontmatter from "remark-frontmatter";
+import nextMDX from '@next/mdx';
+import remarkFrontmatter from 'remark-frontmatter';
 
 const withMDX = nextMDX({
   extension: /\.mdx?$/,
@@ -10,9 +10,9 @@ const withMDX = nextMDX({
 });
 
 export default withMDX({
-  pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
+  pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   i18n: {
     locales: ['en'],
     defaultLocale: 'en',
-  }
+  },
 });
