@@ -9,7 +9,7 @@
 }
 
 .scrolledNav {
-  @apply w-full h-14 py-4 flex items-center justify-evenly sticky top-0 bg-zinc-900;
+  @apply w-full h-14 py-4 flex items-center justify-evenly sticky top-0 bg-black opacity-95;
     z-index: 999;
 }
 
@@ -70,7 +70,7 @@
 }
 
 .navLink {
-  @apply text-white mx-2 px-4 py-3 opacity-90 transition-all hover:bg-neutral-800 rounded;
+  @apply text-white mx-2 px-4 py-3 opacity-90 transition-all hover:bg-neutral-700 rounded;
 }
 
 .lightNavLink {
@@ -108,5 +108,5 @@
 }
 
 .showNav {
-  @apply flex flex-col bg-zinc-900 px-10 py-6 text-white rounded absolute left-4 top-16;
+  @apply flex flex-col bg-slate-700 px-10 py-6 text-white rounded absolute left-4 top-16 opacity-95;
 }

@@ -7,6 +7,11 @@ const withMDX = nextMDX({
     remarkPlugins: [remarkFrontmatter],
     rehypePlugins: [],
   },
+  pwa: {
+    dest: 'public',
+    disable: false,
+  },
+  reactStrictMode: true,
 });
 
 export default withMDX({

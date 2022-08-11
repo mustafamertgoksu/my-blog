@@ -1,5 +1,5 @@
 .wrapper {
-  @apply h-full w-full bg-black opacity-[0.98] flex flex-col items-center overflow-auto;
+  @apply h-full w-full bg-slate-900 flex flex-col items-center overflow-auto;
   font-family: 'Montserrat', sans-serif;
 }
 

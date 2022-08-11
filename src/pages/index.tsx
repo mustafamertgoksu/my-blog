@@ -139,8 +139,8 @@ const Home: NextPage<Props> = ({ posts }) => {
                   <div
                     className={
                       isLightMode
-                        ? 'bg-zinc-900 my-4 rounded flex flex-col justify-center h-48'
-                        : 'bg-black opacity-60 my-4 rounded flex flex-col justify-center h-48 border-2 border-slate-500 hover:border-white'
+                        ? 'bg-zinc-800 my-4 rounded flex flex-col justify-center h-48'
+                        : 'bg-black opacity-60 my-4 rounded flex flex-col justify-center h-48 border-2 transition-all border-slate-500 hover:border-white hover:opacity-80'
                     }
                   >
                     <header className="flex justify-between px-4">
@@ -198,7 +198,7 @@ const Home: NextPage<Props> = ({ posts }) => {
               !isLightMode ? styles.postsTitle : styles.lightPostsTitle
             }
           >
-            Recent Posts
+            Recent Blog Posts
           </h2>
           {posts.map((post: any, index: any) => (
             <div key={index}>
@@ -210,7 +210,12 @@ const Home: NextPage<Props> = ({ posts }) => {
                   onClick={() => setTitle(post.title)}
                 >
                   <div className="flex">
-                    <Image src={post.image} alt={post.title} width="30" height="30" />
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      width="30"
+                      height="30"
+                    />
                     <a className="text-white mx-3">{post.title}</a>
                   </div>
                   <div className="flex justify-center">

@@ -7,7 +7,7 @@
 }
 
 .aboutCard {
-  @apply bg-gray-900 w-80 h-72 text-[1.325rem] rounded px-8 py-5 text-white opacity-40 transition-all
+  @apply bg-[#111] w-80 h-72 text-[1.325rem] rounded px-8 py-5 text-white opacity-70 transition-all
 }
 
 .lightAboutCard {
@@ -39,7 +39,7 @@
 }
 
 .aboutCard:hover {
-  @apply bg-gray-900 w-80 h-72 rounded px-8 py-5 text-white opacity-60 scale-110
+  @apply w-80 h-72 rounded px-8 py-5 text-white opacity-60 scale-110
 }
 
 .lightAboutCard::after {
@@ -70,11 +70,11 @@
 
 @media(max-width: 768px) {
   .aboutCard {
-    @apply bg-gray-900 w-72 h-60 rounded px-8 py-5 text-white opacity-50 scale-110 text-base
+    @apply bg-[#111] w-72 h-60 rounded px-8 py-5 text-white opacity-70 scale-110 text-base
   }
 
   .aboutCard:hover {
-    @apply bg-gray-900 w-72 h-60 rounded px-8 py-5 text-white opacity-90 scale-110
+    @apply w-72 h-60 rounded px-8 py-5 text-white opacity-90 scale-110
   }
 
   .lightAboutCard {
@@ -107,7 +107,7 @@
 }
 
 .siteTitle {
-  @apply flex text-3xl text-neutral-500 opacity-70
+  @apply flex text-3xl text-neutral-300 opacity-70
 }
 
 .lightSiteTitle {
@@ -177,7 +177,7 @@
 }
 
 .postsTitle {
-  @apply flex text-3xl text-neutral-500 opacity-80 my-4
+  @apply flex text-3xl text-neutral-300 opacity-80 my-4
 }
 
 .lightPostsTitle {
@@ -185,7 +185,7 @@
 }
 
 .postCard {
-  @apply cursor-pointer flex flex-col items-center justify-center bg-neutral-900 px-2 py-1 w-96 h-24 opacity-60 hover:opacity-70 my-2 rounded
+  @apply cursor-pointer flex flex-col items-center justify-center bg-black px-2 py-1 w-96 h-24 opacity-90 hover:opacity-70 my-2 rounded
 }
 
 .lightPostCard {
