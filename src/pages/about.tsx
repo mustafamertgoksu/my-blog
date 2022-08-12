@@ -73,7 +73,7 @@ const About: NextPage = () => {
         </h2>
         {SocialLinks.map((socialLink) => (
           <a
-            className={`my-4 py-2 opacity-80 hover:opacity-95 flex items-center justify-around w-48 rounded bg-neutral-900 ${styles.socialLink}`}
+            className={`my-4 py-3 opacity-80 hover:opacity-95 flex items-center justify-around w-48 rounded bg-neutral-900 ${styles.socialLink}`}
             href={socialLink.link}
           >
             <Image src={socialLink.image} width="32" height="32" />

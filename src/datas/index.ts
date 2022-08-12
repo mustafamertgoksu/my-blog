@@ -144,7 +144,7 @@ export const TechsIcons: any[] = [
 
 export const SocialLinks: any[] = [
   {
-    name: 'github',
+    name: 'Github',
     link: 'https://github.com/mustafamertgoksu',
     color: '#000',
     image: '/images/github.svg',
