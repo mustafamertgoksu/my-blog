@@ -22,20 +22,27 @@
     height: 100%;
   }
 
-  body::-webkit-scrollbar {
-    width: 1em;
+  * {
+    scrollbar-color: #c0c0c05f transparent;
+    scrollbar-width: inherit;
   }
 
-  body::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  /* Chrome, Edge, and Safari */
+
+  *::-webkit-scrollbar {
+    width: 12px;
   }
 
-  body::-webkit-scrollbar-thumb {
-    background-color: black;
-    outline: 1px solid slategrey;
+  *::-webkit-scrollbar-track {
+    background: #020327;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #c0c0c04f;
+    border-radius: 7px;
   }
 
   .container {
-    @apply py-8 w-full h-full
+    @apply py-8 w-full h-full overflow-x-hidden
   }
 }

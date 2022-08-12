@@ -142,18 +142,30 @@ export const TechsIcons: any[] = [
   },
 ];
 
-export const SocialLinks: object[] = [
+export const SocialLinks: any[] = [
   {
-    github: 'https://github.com/mustafamertgoksu/',
+    name: 'github',
+    link: 'https://github.com/mustafamertgoksu',
+    color: '#000',
+    image: '/images/github.svg',
   },
   {
-    medium: 'https://medium.com/@mustafamertgoksu',
+    name: 'Medium',
+    color: '#000',
+    link: 'https://medium.com/@mustafamertgoksu',
+    image: '/images/medium.svg',
   },
   {
-    spotify: 'https://open.spotify.com/user/31vqhfol3es4uawhpzhqgi2cz4nq',
+    name: 'Spotify',
+    link: 'https://open.spotify.com/user/31vqhfol3es4uawhpzhqgi2cz4nq',
+    color: '#1DB954',
+    image: '/images/spotify.svg',
   },
   {
-    chess: 'https://chess.com/member/mustafamertgokssu',
+    name: 'Chess.com',
+    link: 'https://chess.com/member/mustafamertgokssu',
+    color: '#000',
+    image: '/images/chess.svg',
   },
 ];
 

@@ -18,28 +18,6 @@
   }
 }
 
-.techs {
-  @apply px-24
-}
-
-@media(max-width: 620px) {
-  .techs {
-    @apply px-10
-  }
-}
-
-@media(max-width: 500px) {
-  .techs {
-    @apply px-4
-  }
-}
-
-@media(max-width: 410px) {
-  .techs {
-    @apply px-1
-  }
-}
-
 .posts {
   @apply w-full flex flex-col items-center my-12
 }
@@ -53,9 +31,21 @@
 }
 
 .postCard {
-  @apply cursor-pointer flex flex-col items-center justify-center bg-[#111]  px-2 py-1 w-96 h-24 opacity-80 hover:opacity-95 my-2 rounded
+  @apply cursor-pointer flex flex-col items-center justify-center bg-[#111] px-2 py-1 w-96 h-24 opacity-80 hover:opacity-95 my-2 rounded
 }
 
 .lightPostCard {
   @apply cursor-pointer flex flex-col items-center justify-center bg-slate-900 px-2 py-1 w-96 h-24 opacity-90 hover:opacity-80 my-2 rounded
+}
+
+@media (max-width: 620px) {
+  .postCard {
+    @apply w-80
+  }
+}
+
+@media (max-width: 330) {
+  .postCard {
+    @apply w-64
+  }
 }

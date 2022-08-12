@@ -3,11 +3,11 @@
 }
 
 .aboutCard {
-  @apply bg-[#111] w-80 h-72 text-[1.325rem] rounded px-8 py-5 text-white opacity-70 transition-all
+  @apply bg-[#111] w-96 h-80 my-4 text-[1.450rem] rounded px-8 py-5 text-white opacity-70 transition-all
 }
 
 .lightAboutCard {
-  @apply bg-gray-900 w-80 h-72 text-[1.325rem] rounded px-8 py-5 text-white opacity-90 transition-all
+  @apply bg-gray-900 w-96 h-80 my-4 text-[1.450rem] rounded px-8 py-5 text-white opacity-90 transition-all
 }
 
 /* About Card Animation */
@@ -35,7 +35,7 @@
 }
 
 .aboutCard:hover {
-  @apply w-80 h-72 rounded px-8 py-5 text-white opacity-60 scale-110
+  @apply w-96 my-4 h-80 text-[1.450rem] rounded px-8 py-5 text-white opacity-60 scale-110
 }
 
 .lightAboutCard::after {
@@ -61,24 +61,24 @@
 }
 
 .lightAboutCard:hover {
-  @apply bg-gray-900 w-80 h-72 rounded px-8 py-5 text-white opacity-95 scale-110
+  @apply bg-gray-900 my-4 w-96 h-80 text-[1.450rem] rounded px-8 py-5 text-white opacity-95 scale-110
 }
 
 @media(max-width: 768px) {
   .aboutCard {
-    @apply bg-[#111] w-72 h-60 rounded px-8 py-5 text-white opacity-70 scale-110 text-base
+    @apply w-80 h-80 my-4 text-[1.325rem]
   }
 
   .aboutCard:hover {
-    @apply w-72 h-60 rounded px-8 py-5 text-white opacity-90 scale-110
+    @apply w-80 h-80 my-4 rounded text-[1.325rem] px-8 py-5 text-white opacity-90
   }
 
   .lightAboutCard {
-    @apply w-72 h-60 text-base scale-110
+    @apply w-80 h-80 my-4 text-[1.325rem]
   }
 
   .lightAboutCard:hover {
-    @apply w-72 h-60
+    @apply w-80 h-80 text-[1.325rem]
   }
 }
 
@@ -126,10 +126,30 @@
   }
 }
 
+.techs {
+  @apply px-24
+}
+
+@media(max-width: 620px) {
+  .techs {
+    @apply px-10
+  }
+}
+
+@media(max-width: 500px) {
+  .techs {
+    @apply px-4
+  }
+}
+
+@media(max-width: 410px) {
+  .techs {
+    @apply px-1
+  }
+}
+
 .myLinks {
-
+  @apply flex flex-col items-center w-full my-5 py-4
 }
 
-.contact {
-  
-}
+.contact {}
