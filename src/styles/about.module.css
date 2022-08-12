@@ -82,6 +82,24 @@
   }
 }
 
+@media (max-width: 350px) {
+  .aboutCard {
+    @apply w-64 h-64 my-4 text-base
+  }
+
+  .aboutCard:hover {
+    @apply w-64 h-64 my-4 rounded text-base px-8 py-5 text-white opacity-90
+  }
+
+  .lightAboutCard {
+    @apply w-64 h-64 my-4 text-base
+  }
+
+  .lightAboutCard:hover {
+    @apply w-64 h-64 my-4 rounded text-base px-8 py-5 text-white opacity-90
+  }
+}
+
 .siteTitle {
   @apply flex text-3xl text-neutral-300 opacity-70
 }
