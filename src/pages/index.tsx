@@ -218,7 +218,7 @@ const Home: NextPage<Props> = ({ posts }) => {
                     width="30"
                     height="30"
                   />
-                  <a className="text-white mx-3">{post.title}</a>
+                  <a href="" className="text-white mx-3">{post.title}</a>
                 </div>
                 <div className="flex justify-center">
                   <h3 className="text-center text-white">Date: &nbsp;</h3>

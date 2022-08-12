@@ -82,6 +82,7 @@ const Navbar = () => {
       </div>
       <div className={styles.navRight}>
         <button
+          title="change theme"
           onClick={toggleTheme}
           className={
             isLightMode ? styles.lightModeToggleBtn : styles.modeToggleBtn
