@@ -18,9 +18,6 @@ const About: NextPage = () => {
     setTitle('About');
   }, []);
 
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-
   return (
     <div className="container">
       <section className={styles.aboutSection}>

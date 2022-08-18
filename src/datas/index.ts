@@ -15,7 +15,7 @@ export const datas: Datas = {
     "I'm a student and frontend developer in Turkey. I love making software. I like playing chess and solving cube. I'm currently studying to get a good high school ",
 };
 
-export const TechsIcons: any[] = [
+export const TechsIcons: {name: string, image: string, color: string, dark: boolean}[] = [
   {
     name: 'HTML',
     image: '/images/html5.svg',
@@ -48,6 +48,8 @@ export const TechsIcons: any[] = [
   },
   {
     name: 'Next.js',
+    image: '',
+    color: '',
     dark: true,
   },
   {

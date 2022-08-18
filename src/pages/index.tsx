@@ -4,8 +4,6 @@ import { useTitle } from '../hooks/useTitle';
 import styles from '../styles/home.module.css';
 import { useToggleTheme } from '../hooks/useToggleTheme';
 import { datas } from '../datas';
-import axios from 'axios';
-import { githubRepositoriesURL } from '../datas';
 import { AiFillStar } from 'react-icons/ai';
 import { BsGithub } from 'react-icons/bs';
 import ContentLoader from 'react-content-loader';
@@ -17,6 +15,7 @@ import Techs from '../components/techs';
 import { getAllPosts } from '../lib/posts';
 import Link from 'next/link';
 import aboutStyles from '../styles/about.module.css';
+import projectStyles from '../styles/projects.module.css';
 
 type Props = {
   posts: any;
@@ -26,17 +25,14 @@ const Home: NextPage<Props> = ({ posts }) => {
   const { setTitle } = useTitle();
   const { theme } = useToggleTheme();
   const isLightMode = theme === 'light';
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [repos, setRepos] = useState([]);
-  const searchRepos = async () => {
-    setLoading(true);
-    const res = await axios.get(githubRepositoriesURL);
+  const searchTopRepos = async () => {
     setLoading(false);
-    setRepos(res.data);
   };
   useEffect(() => {
     setTitle('Home');
-    searchRepos();
+    searchTopRepos();
   }, []);
   return (
     <div className="container">
@@ -138,34 +134,26 @@ const Home: NextPage<Props> = ({ posts }) => {
                 key={repo.name}
                 target="blank"
                 rel="noreferrer"
-                className={isLightMode ? styles.lightProject : styles.project}
+                className={
+                  isLightMode
+                    ? projectStyles.lightProject
+                    : projectStyles.project
+                }
               >
                 <div
                   className={
-                    isLightMode
-                      ? 'bg-zinc-800 my-4 rounded flex flex-col justify-center h-48'
-                      : 'bg-black opacity-60 my-4 rounded flex flex-col justify-center h-48 border-2 transition-all border-slate-500 hover:border-white hover:opacity-80'
+                    !isLightMode
+                      ? projectStyles.eachProject
+                      : projectStyles.lightEachProject
                   }
                 >
                   <header className="flex justify-between px-4">
-                    <span
-                      className={
-                        isLightMode
-                          ? 'text-xl text-green-600'
-                          : 'text-xl text-green-700'
-                      }
-                    >
+                    <span className={projectStyles.projectTitle}>
                       {repo.name}
                     </span>
                     <BsGithub className="text-2xl text-white" />
                   </header>
-                  <main
-                    className={
-                      isLightMode
-                        ? 'px-6 py-4 text-blue-500'
-                        : 'px-6 py-4 text-blue-500'
-                    }
-                  >
+                  <main className={'px-6 py-4 text-blue-500'}>
                     {repo.description}
                   </main>
                   <footer className="flex items-center justify-between px-4">
