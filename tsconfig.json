@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/lib/posts.ts", "src/components/syntaxHighlighter.jsx", "src/pages/_offline.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/lib/posts.ts"],
   "exclude": ["node_modules"]
 }

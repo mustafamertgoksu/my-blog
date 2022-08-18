@@ -28,6 +28,7 @@ const ScrollTopButton = styled.a`
     display: none;
   }
 `;
+
 const Layout: FC<Props> = ({ children }) => {
   const { title } = useTitle();
   const { theme } = useToggleTheme();

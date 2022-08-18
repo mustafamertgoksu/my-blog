@@ -1,9 +1,9 @@
 .wrapper {
-  @apply h-full w-full bg-slate-900 flex flex-col items-center overflow-auto;
+  @apply h-full w-full bg-slate-900 flex flex-col items-center overflow-auto scroll-smooth;
   font-family: 'Montserrat', sans-serif;
 }
 
 .lightWrapper {
-  @apply h-full w-full bg-slate-100 opacity-[0.96] flex flex-col items-center overflow-auto;
-    font-family: 'Montserrat', sans-serif;
+  @apply h-full w-full bg-slate-100 opacity-[0.96] flex flex-col items-center overflow-auto scroll-smooth;
+  font-family: 'Montserrat', sans-serif;
 }
