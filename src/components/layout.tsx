@@ -19,11 +19,14 @@ const ScrollTopButton = styled.a`
   left: 90%;
   top: 0;
   right: 0;
-  bottom: 5%;
+  bottom: 8%;
   background-color: rgb(30 41 59);
   border: none;
   padding: 1rem;
   border-radius: 50%;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 const Layout: FC<Props> = ({ children }) => {
   const { title } = useTitle();
