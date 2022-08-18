@@ -15,7 +15,12 @@ export const datas: Datas = {
     "I'm a student and frontend developer in Turkey. I love making software. I like playing chess and solving cube. I'm currently studying to get a good high school ",
 };
 
-export const TechsIcons: {name: string, image: string, color: string, dark: boolean}[] = [
+export const TechsIcons: {
+  name: string;
+  image: string;
+  color: string;
+  dark: boolean;
+}[] = [
   {
     name: 'HTML',
     image: '/images/html5.svg',
@@ -165,7 +170,7 @@ export const SocialLinks: any[] = [
   },
   {
     name: 'Chess.com',
-    link: 'https://chess.com/member/mustafamertgokssu',
+    link: 'https://www.chess.com/member/mustafamertgoksuchess',
     color: '#000',
     image: '/images/chess.svg',
   },
@@ -202,7 +207,7 @@ export const topProjects: Projects = [
   {
     name: 'My Website',
     description: 'My personal website',
-    html_url: 'https://github.com/mustafamertgoksu/my-website',
+    html_url: 'https://github.com/mustafamertgoksu/my-blog',
     language: 'TypeScript',
     stargazers_count: '1',
     image: '/images/typescript.svg',
