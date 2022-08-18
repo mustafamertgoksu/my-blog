@@ -22,10 +22,16 @@
   .postCard {
     @apply w-80
   }
+  .lightPostCard {
+  @apply w-80
+  }
 }
 
 @media (max-width: 330px) {
   .postCard {
+    @apply w-64
+  }
+  .lightPostCard {
     @apply w-64
   }
 }

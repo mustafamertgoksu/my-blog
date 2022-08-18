@@ -19,5 +19,23 @@
 }
 
 .lightTechName {
-  @apply text-zinc-900 mx-2;
+  @apply text-center text-zinc-900 font-semibold ml-2 mx-2;
+}
+
+@media(max-width: 620px) {
+  /* .lightTechCard {
+    @apply border flex my-2 items-center py-2 px-6 select-none cursor-pointer rounded-md bg-zinc-900;
+  }
+
+  .lightTechCard:hover {
+    @apply border flex my-2 items-center py-2 px-6 select-none cursor-pointer rounded-md bg-zinc-900;
+  }
+
+  .lightTechName {
+    @apply text-center text-white font-semibold ml-2 mx-2;
+  } */
+
+  .techImage {
+    display: none;
+  }
 }

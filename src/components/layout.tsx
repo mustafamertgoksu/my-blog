@@ -1,4 +1,4 @@
-import { FC, useEffect } from 'react';
+import { FC, useEffect, useState } from 'react';
 import Navbar from './navbar';
 import Footer from './footer';
 import Head from 'next/head';
@@ -9,33 +9,40 @@ import { useToggleTheme } from '../hooks/useToggleTheme';
 import { NavbarContext } from '../context/navbar.context';
 import { useContext } from 'react';
 import styled from 'styled-components';
-
-type Props = {
-  children: React.ReactNode;
-};
-
-export const Main = styled.main`
+import { AiOutlineArrowUp } from 'react-icons/ai';
+type Props = { children: React.ReactNode };
+const Main = styled.main`
   width: 100%;
 `;
-
+const ScrollTopButton = styled.a`
+  position: sticky;
+  left: 90%;
+  top: 0;
+  right: 0;
+  bottom: 5%;
+  background-color: rgb(30 41 59);
+  border: none;
+  padding: 1rem;
+  border-radius: 50%;
+`;
 const Layout: FC<Props> = ({ children }) => {
   const { title } = useTitle();
   const { theme } = useToggleTheme();
   const isLightMode = theme === 'light';
   const { setNavScroll, setNavVisibility } = useContext(NavbarContext);
-
+  const [scrollIcon, setScrollIcon] = useState(false);
   const changeNavBackground = (e: any) => {
     if (e.currentTarget.scrollTop >= 80) {
       setNavScroll(true);
+      setScrollIcon(true);
     } else {
       setNavScroll(false);
+      setScrollIcon(false);
     }
   };
-
   useEffect(() => {
     setNavVisibility(false);
-  }, [title])
-
+  }, [title]);
   return (
     <>
       <Head>
@@ -49,12 +56,16 @@ const Layout: FC<Props> = ({ children }) => {
         className={isLightMode ? styles.lightWrapper : styles.wrapper}
         onScroll={changeNavBackground}
       >
-        <Navbar />
+        <Navbar /> <div id="scrollTop" className="hidden"></div>
         <Main>{children}</Main>
+        {scrollIcon && (
+          <ScrollTopButton href="#scrollTop">
+            <AiOutlineArrowUp className="text-white text-lg" />
+          </ScrollTopButton>
+        )}
         <Footer />
       </div>
     </>
   );
 };
-
 export default Layout;

@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { ToggleTheme } from "../context/toggleTheme";
 
-export function useToggleTheme() {
+export const useToggleTheme = () => {
   return useContext(ToggleTheme);
 }

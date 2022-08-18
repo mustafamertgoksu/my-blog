@@ -24,6 +24,7 @@ const Techs = () => {
                 alt={tech.name}
                 width="30"
                 height="30"
+                className={styles.techImage}
               />
               <span
                 className={
@@ -45,6 +46,7 @@ const Techs = () => {
               width="30"
               height="30"
               alt={tech.name}
+              className={styles.techImage}
             />
             <span
               className={!isLightMode ? styles.techName : styles.lightTechName}
