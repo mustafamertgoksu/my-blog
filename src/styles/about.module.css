@@ -170,4 +170,14 @@
   @apply flex flex-col items-center w-full my-5 py-4
 }
 
-.contact {}
+.contact {
+  @apply flex flex-col  items-center
+}
+
+.socialLink {
+  @apply my-4 py-3 opacity-80 hover:opacity-95 flex items-center justify-around w-48 rounded bg-neutral-900
+}
+
+.lightSocialLink {
+  @apply my-4 py-3 opacity-100 hover:opacity-95 flex items-center justify-around w-48 rounded bg-neutral-900
+}

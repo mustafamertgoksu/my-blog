@@ -1,0 +1,39 @@
+.contact {
+  @apply border p-4 border-gray-400 shadow-slate-800 shadow-lg flex flex-col rounded-md w-2/3 bg-slate-900;
+}
+
+.lightContact {
+  @apply border p-4 flex flex-col rounded-md w-2/3 bg-[#111] shadow-neutral-900 shadow-lg;
+}
+
+.userText {
+  @apply my-2 mx-1 text-gray-300;
+}
+
+.lightUserText {
+  @apply my-2 mx-1 text-gray-300
+}
+
+.input {
+  @apply bg-slate-800 p-2 rounded text-gray-200
+}
+
+.lightInput {
+  @apply bg-gray-200 p-2 rounded text-slate-800
+}
+
+.textarea {
+  @apply border-2 border-gray-500 rounded-md p-2 w-full h-32 resize-none bg-slate-800 text-gray-200;
+}
+
+.lightTextarea {
+  @apply border-2 border-gray-500 rounded-md p-2 w-full h-32 resize-none bg-gray-200 text-black;
+}
+
+.sendBtn {
+  @apply w-full h-8 bg-blue-900 my-2 rounded
+}
+
+.lightSendBtn {
+  @apply w-full h-8 bg-blue-900 my-2 rounded
+}

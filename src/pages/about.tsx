@@ -9,6 +9,7 @@ import Typewriter from 'typewriter-effect';
 import Techs from '../components/techs';
 import { SocialLinks } from '../datas';
 import Image from 'next/image';
+import Contact from '../components/contact';
 
 const About: NextPage = () => {
   const { setTitle } = useTitle();
@@ -70,7 +71,7 @@ const About: NextPage = () => {
         </h2>
         {SocialLinks.map((socialLink) => (
           <a
-            className={`my-4 py-3 opacity-80 hover:opacity-95 flex items-center justify-around w-48 rounded bg-neutral-900 ${styles.socialLink}`}
+            className={!isLightMode ? styles.socialLink : styles.lightSocialLink}
             href={socialLink.link}
           >
             <Image src={socialLink.image} width="32" height="32" />
@@ -78,7 +79,18 @@ const About: NextPage = () => {
           </a>
         ))}
       </section>
-      <section className={styles.contact}></section>
+      <section className={styles.contact}>
+        <h2
+          className={
+            !isLightMode
+              ? 'text-gray-50 opacity-50 text-center text-3xl my-4'
+              : 'text-neutral-900 text-center text-3xl my-4'
+          }
+        >
+          Contact Me
+        </h2>
+        <Contact />
+      </section>
     </div>
   );
 };
