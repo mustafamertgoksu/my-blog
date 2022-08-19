@@ -11,8 +11,7 @@ interface Inputs {
 }
 
 const Contact: React.FC = () => {
-  const { theme } = useToggleTheme();
-  const isLightMode = theme === 'light';
+  const { isLightMode } = useToggleTheme();
   const { register, handleSubmit } = useForm<Inputs>();
   const router = useRouter();
   const onSubmit: SubmitHandler<Inputs> = ({ message, email, name }) => {

@@ -23,8 +23,7 @@ type Props = {
 
 const Home: NextPage<Props> = ({ posts }) => {
   const { setTitle } = useTitle();
-  const { theme } = useToggleTheme();
-  const isLightMode = theme === 'light';
+  const { isLightMode } = useToggleTheme();
   const [loading, setLoading] = useState(true);
   const [repos, setRepos] = useState([]);
   const searchTopRepos = async () => {

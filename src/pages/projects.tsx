@@ -10,8 +10,7 @@ import { BsGithub } from 'react-icons/bs';
 
 const Projects: NextPage = () => {
   const { setTitle } = useTitle();
-  const { theme } = useToggleTheme();
-  const isLightMode = theme === 'light';
+  const { isLightMode } = useToggleTheme();
   const [repos, setRepos] = useState([]);
 
   const getRepos = async () => {

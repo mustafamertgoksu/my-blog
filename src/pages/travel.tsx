@@ -5,8 +5,7 @@ import { useToggleTheme } from "../hooks/useToggleTheme";
 
 const Travel: NextPage = () => {
   const { setTitle } = useTitle();
-  const { theme } = useToggleTheme();
-  const isLightMode = theme === "light";
+  const { isLightMode } = useToggleTheme();
   useEffect(() => {
     setTitle("Travel");
   }, []);

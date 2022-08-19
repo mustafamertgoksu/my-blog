@@ -4,8 +4,7 @@ import { useToggleTheme } from '../hooks/useToggleTheme';
 import styles from '../styles/techs.module.css';
 
 const Techs = () => {
-  const { theme, toggleTheme } = useToggleTheme();
-  const isLightMode = theme === 'light';
+  const { isLightMode } = useToggleTheme();
   return (
     <div className={styles.techsContainer}>
       {TechsIcons.map((tech, index) => {
@@ -24,7 +23,6 @@ const Techs = () => {
                 alt={tech.name}
                 width="30"
                 height="30"
-                className={styles.techIcon}
               />
               <span
                 className={
@@ -46,7 +44,6 @@ const Techs = () => {
               width="30"
               height="30"
               alt={tech.name}
-              className={styles.techIcon}
             />
             <span
               className={!isLightMode ? styles.techName : styles.lightTechName}

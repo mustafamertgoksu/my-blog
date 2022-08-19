@@ -31,8 +31,7 @@ const ScrollTopButton = styled.a`
 
 const Layout: FC<Props> = ({ children }) => {
   const { title } = useTitle();
-  const { theme } = useToggleTheme();
-  const isLightMode = theme === 'light';
+  const { isLightMode } = useToggleTheme();
   const { setNavScroll, setNavVisibility } = useContext(NavbarContext);
   const [scrollIcon, setScrollIcon] = useState(false);
   const changeNavBackground = (e: any) => {

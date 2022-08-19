@@ -7,8 +7,7 @@ import { useState, useContext } from "react";
 import { NavbarContext } from "../context/navbar.context";
 
 const Navbar = () => {
-  const { theme, toggleTheme } = useToggleTheme();
-  const isLightMode = theme === "light";
+  const { toggleTheme, isLightMode } = useToggleTheme();
   const { navScroll, navVisibility, setNavVisibility } = useContext(NavbarContext);
 
   const toggleNav = () => {

@@ -13,8 +13,7 @@ import Contact from '../components/contact';
 
 const About: NextPage = () => {
   const { setTitle } = useTitle();
-  const { theme } = useToggleTheme();
-  const isLightMode = theme === 'light';
+  const { isLightMode } = useToggleTheme();
   useEffect(() => {
     setTitle('About');
   }, []);

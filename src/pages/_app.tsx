@@ -8,8 +8,9 @@ import NavbarProvider from "../context/navbar.context";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const { theme, toggleTheme } = useLocalTheme();
+  const isLightMode = theme === "light";
   return (
-    <ToggleTheme.Provider value={{ theme, toggleTheme }}>
+    <ToggleTheme.Provider value={{ theme, toggleTheme, isLightMode }}>
       <TitleProvider>
         <NavbarProvider>
           <Layout>
