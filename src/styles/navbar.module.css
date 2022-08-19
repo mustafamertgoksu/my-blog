@@ -9,7 +9,7 @@
 }
 
 .scrolledNav {
-  @apply w-full h-14 py-4 flex items-center justify-evenly sticky top-0 bg-[#001020] opacity-95;
+  @apply w-full h-14 py-4 flex items-center justify-evenly sticky top-0 bg-[#001020] opacity-100;
     z-index: 999;
 }
 
