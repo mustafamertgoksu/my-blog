@@ -13,6 +13,8 @@ import { AiOutlineArrowUp } from 'react-icons/ai';
 type Props = { children: React.ReactNode };
 const Main = styled.main`
   width: 100%;
+  display: flex;
+  justify-content: center;
 `;
 const ScrollTopButton = styled.a`
   position: sticky;
