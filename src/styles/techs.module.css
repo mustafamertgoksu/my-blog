@@ -22,20 +22,14 @@
   @apply text-center text-zinc-900 font-semibold ml-2 mx-2;
 }
 
-@media(max-width: 620px) {
-  /* .lightTechCard {
-    @apply border flex my-2 items-center py-2 px-6 select-none cursor-pointer rounded-md bg-zinc-900;
+@media (max-width: 400px) {
+  .techName {
+    @apply hidden
   }
-
-  .lightTechCard:hover {
-    @apply border flex my-2 items-center py-2 px-6 select-none cursor-pointer rounded-md bg-zinc-900;
+  .techCard {
+    @apply justify-center
   }
-
   .lightTechName {
-    @apply text-center text-white font-semibold ml-2 mx-2;
-  } */
-
-  .techImage {
-    display: none;
+    @apply hidden
   }
 }
