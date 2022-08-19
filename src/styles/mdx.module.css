@@ -56,7 +56,7 @@
 
 @media(max-width: 1024px) {
   .mdxContainer {
-      padding: 1rem 10rem;
+    padding: 1rem 10rem;
   }
 }
 
@@ -66,3 +66,30 @@
   }
 }
 
+@media(max-width: 450px) {
+  .mdxContainer {
+    padding: 1rem 1rem;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .mdxContainer h1 {
+    font-size: 1.4rem;
+  }
+
+  .mdxContainer h2 {
+    font-size: 1.2rem;
+  }
+
+  .mdxContainer h3 {
+    font-size: 1rem;
+  }
+
+  .example {
+    display: none;
+  }
+
+  .mdxContainer pre {
+    display: none;
+  }
+}
