@@ -5,13 +5,11 @@ import TitleProvider from "../context/title.context";
 import { ToggleTheme } from "../context/toggleTheme";
 import { useLocalTheme } from "../hooks/useLocalTheme";
 import NavbarProvider from "../context/navbar.context";
-import ErrorBoundary from "../components/errorBoundry";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const { theme, toggleTheme } = useLocalTheme();
   const isLightMode = theme === "light";
   return (
-    <ErrorBoundary>
       <ToggleTheme.Provider value={{ theme, toggleTheme, isLightMode }}>
         <TitleProvider>
           <NavbarProvider>
@@ -21,7 +19,6 @@ function MyApp({ Component, pageProps }: AppProps) {
           </NavbarProvider>
         </TitleProvider>
       </ToggleTheme.Provider>
-    </ErrorBoundary>
   );
 }
 
