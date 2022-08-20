@@ -25,8 +25,8 @@ import { setContext } from '@apollo/client/link/context';
 import {ProjectCard} from '../styles/project.styles';
 
 type Props = {
-  posts: object[];
-  pinnedItems: object[];
+  posts: [];
+  pinnedItems: [];
 };
 
 const Home: NextPage<Props> = ({ posts, pinnedItems }) => {
