@@ -39,16 +39,16 @@ const Projects: NextPage<Props> = ({ pinnedItems }) => {
   }, []);
   return (
     <main className="container">
-      <h2
-        className={
-          !isLightMode
-            ? 'flex text-3xl text-neutral-300 opacity-70 text-center'
-            : 'flex text-3xl text-black opacity-90 text-center'
-        }
-      >
-        Top Projects
-      </h2>
       <section className="flex flex-col items-center my-5">
+        <h2
+          className={
+            !isLightMode
+              ? 'flex text-3xl text-neutral-300 opacity-70 text-center'
+              : 'flex text-3xl text-black opacity-90 text-center'
+          }
+        >
+          Top Projects
+        </h2>
         {loading ? (
           <>
             <ContentLoader
@@ -123,7 +123,7 @@ const Projects: NextPage<Props> = ({ pinnedItems }) => {
   );
 };
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const httpLink = createHttpLink({
     uri: 'https://api.github.com/graphql',
   });
