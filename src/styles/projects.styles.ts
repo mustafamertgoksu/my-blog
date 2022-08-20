@@ -1,5 +1,50 @@
 import styled from "styled-components";
 
+export const StyledProjects = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  font-family: "Montserrat";
+  .projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1,
+    h2,
+    h3 {
+      color: #eee;
+    }
+    h2 {
+      padding: 0.4rem;
+      margin-left: 0.5rem;
+      font-size: 1.6rem;
+      svg {
+        font-size: 1.9rem;
+        &#typescript {
+          width: 35px;
+          height: 35px;
+          position: relative;
+          top: 5px;
+        }
+      }
+    }
+    ul {
+      display: flex;
+      gap: 1rem;
+      width: 100%;
+      height: 100%;
+      padding: 0.5rem;
+      margin-bottom: 2rem;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+`;
+
 export const ProjectCard = styled.li`
   display: flex;
   flex-direction: column;
@@ -8,10 +53,10 @@ export const ProjectCard = styled.li`
   height: 200px;
   padding: 2rem;
   border-radius: 0.5rem;
-  margin: 1rem 0;
   background-color: #000001;
   opacity: 0.75;
   gap: 0.3rem;
+  margin: 1rem 0;
   @media (max-width: 429px) {
     width: 350px;
   }

@@ -1,177 +1,311 @@
 import type { NextPage } from 'next';
-import { useEffect, useState } from 'react';
 import { useTitle } from '../hooks/useTitle';
 import { useToggleTheme } from '../hooks/useToggleTheme';
 import { githubRepositoriesURL } from '../datas';
-import Image from 'next/image';
+import { useState, useEffect } from 'react';
 import { AiFillStar } from 'react-icons/ai';
 import { BsGithub } from 'react-icons/bs';
+import { SiJavascript } from 'react-icons/si';
+import { FaPython } from 'react-icons/fa';
+import axios from 'axios';
 import ContentLoader from 'react-content-loader';
+import { StyledProjects, ProjectCard } from '../styles/projects.styles';
+import { ApiType } from '../types/githubAPIType';
 
-import {
-  ApolloClient,
-  createHttpLink,
-  InMemoryCache,
-  gql,
-} from '@apollo/client';
-import { ProjectCard } from '../styles/project.styles';
-
-import { setContext } from '@apollo/client/link/context';
-
-type Props = {
-  pinnedItems: [];
-};
-
-const Projects: NextPage<Props> = ({ pinnedItems }) => {
+const Projects: NextPage = () => {
   const { setTitle } = useTitle();
   const { isLightMode } = useToggleTheme();
-  const [repos, setRepos] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const searchTopRepos = async () => {
-    setLoading(false);
+
+  const [loading, setLoading] = useState(false);
+  const [repos, setRepos] = useState([] as ApiType[]);
+
+  const searchRepos = async () => {
+    try {
+      setLoading(true);
+      const { data } = await axios.get<ApiType[]>(githubRepositoriesURL);
+      setLoading(false);
+      setRepos(data);
+    } catch {
+      console.log('error');
+    }
   };
 
   useEffect(() => {
     setTitle('Projects');
-    searchTopRepos();
+    searchRepos();
   }, []);
   return (
     <main className="container">
-      <section className="flex flex-col items-center my-5">
-        <h2
-          className={
-            !isLightMode
-              ? 'flex text-3xl text-neutral-300 opacity-70 text-center'
-              : 'flex text-3xl text-black opacity-90 text-center'
-          }
-        >
-          Top Projects
-        </h2>
-        {loading ? (
-          <>
-            <ContentLoader
-              speed={2}
-              width={400}
-              height={160}
-              viewBox="0 0 400 160"
-              backgroundColor="#000010"
-              foregroundColor="#111"
+      <StyledProjects>
+        <div className="projects-container">
+          <h2 className="flex items-center gap-2">
+            JavaScript <SiJavascript style={{ color: '#f0db4f' }} />
+          </h2>
+          <ul>
+            {loading ? (
+              <>
+                <ContentLoader
+                  speed={2}
+                  width={400}
+                  height={160}
+                  viewBox="0 0 400 160"
+                  backgroundColor="#000001"
+                  foregroundColor="#111"
+                >
+                  <rect x="48" y="8" rx="3" ry="3" width="88" height="6" />
+                  <rect x="48" y="26" rx="3" ry="3" width="52" height="6" />
+                  <rect x="0" y="56" rx="3" ry="3" width="410" height="6" />
+                  <rect x="0" y="72" rx="3" ry="3" width="380" height="6" />
+                  <rect x="0" y="88" rx="3" ry="3" width="178" height="6" />
+                  <circle cx="20" cy="20" r="20" />
+                </ContentLoader>
+                <ContentLoader
+                  speed={2}
+                  width={400}
+                  height={160}
+                  viewBox="0 0 400 160"
+                  backgroundColor="#000001"
+                  foregroundColor="#111"
+                >
+                  <rect x="48" y="8" rx="3" ry="3" width="88" height="6" />
+                  <rect x="48" y="26" rx="3" ry="3" width="52" height="6" />
+                  <rect x="0" y="56" rx="3" ry="3" width="410" height="6" />
+                  <rect x="0" y="72" rx="3" ry="3" width="380" height="6" />
+                  <rect x="0" y="88" rx="3" ry="3" width="178" height="6" />
+                  <circle cx="20" cy="20" r="20" />
+                </ContentLoader>
+                <ContentLoader
+                  speed={2}
+                  width={400}
+                  height={160}
+                  viewBox="0 0 400 160"
+                  backgroundColor="#000001"
+                  foregroundColor="#111"
+                >
+                  <rect x="48" y="8" rx="3" ry="3" width="88" height="6" />
+                  <rect x="48" y="26" rx="3" ry="3" width="52" height="6" />
+                  <rect x="0" y="56" rx="3" ry="3" width="410" height="6" />
+                  <rect x="0" y="72" rx="3" ry="3" width="380" height="6" />
+                  <rect x="0" y="88" rx="3" ry="3" width="178" height="6" />
+                  <circle cx="20" cy="20" r="20" />
+                </ContentLoader>
+              </>
+            ) : (
+              <>
+                {repos.map((repo) => {
+                  if (repo.language === 'JavaScript') {
+                    return (
+                      <ProjectCard key={repo.id}>
+                        <>
+                          <header>
+                            <a
+                              target="_blank"
+                              rel="noreferrer"
+                              href={repo.html_url}
+                            >
+                              {repo.name}
+                            </a>
+                            <BsGithub className="icon" />
+                          </header>
+                          <p>{repo.description}</p>
+                          <footer>
+                            <span>{repo.stargazers_count}</span>
+                            <AiFillStar />
+                          </footer>
+                        </>
+                      </ProjectCard>
+                    );
+                  }
+                  return '';
+                })}
+              </>
+            )}
+          </ul>
+          <h2 className="flex items-center gap-2">
+            TypeScript{' '}
+            <svg
+              id="typescript"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 48 48"
             >
-              <rect x="48" y="8" rx="3" ry="3" width="88" height="6" />
-              <rect x="48" y="26" rx="3" ry="3" width="52" height="6" />
-              <rect x="0" y="56" rx="3" ry="3" width="410" height="6" />
-              <rect x="0" y="72" rx="3" ry="3" width="380" height="6" />
-              <rect x="0" y="88" rx="3" ry="3" width="178" height="6" />
-              <circle cx="20" cy="20" r="20" />
-            </ContentLoader>
-            <ContentLoader
-              speed={2}
-              width={400}
-              height={160}
-              viewBox="0 0 400 160"
-              backgroundColor="#000010"
-              foregroundColor="#111"
-            >
-              <rect x="48" y="8" rx="3" ry="3" width="88" height="6" />
-              <rect x="48" y="26" rx="3" ry="3" width="52" height="6" />
-              <rect x="0" y="56" rx="3" ry="3" width="410" height="6" />
-              <rect x="0" y="72" rx="3" ry="3" width="380" height="6" />
-              <rect x="0" y="88" rx="3" ry="3" width="178" height="6" />
-              <circle cx="20" cy="20" r="20" />
-            </ContentLoader>
-            <ContentLoader
-              speed={2}
-              width={400}
-              height={160}
-              viewBox="0 0 400 160"
-              backgroundColor="#000010"
-              foregroundColor="#111"
-            >
-              <rect x="48" y="8" rx="3" ry="3" width="88" height="6" />
-              <rect x="48" y="26" rx="3" ry="3" width="52" height="6" />
-              <rect x="0" y="56" rx="3" ry="3" width="410" height="6" />
-              <rect x="0" y="72" rx="3" ry="3" width="380" height="6" />
-              <rect x="0" y="88" rx="3" ry="3" width="178" height="6" />
-              <circle cx="20" cy="20" r="20" />
-            </ContentLoader>
-          </>
-        ) : (
-          <div className="">
-            {pinnedItems.map((repo: any) => (
-              <ProjectCard key={repo.id}>
-                <>
-                  <header>
-                    <a target="_blank" rel="noreferrer" href={repo.url}>
-                      {repo.name}
-                    </a>
-                    <BsGithub className="icon" />
-                  </header>
-                  <p>{repo.description}</p>
-                  <footer>
-                    <span>{repo.stargazerCount}</span>
-                    <AiFillStar />
-                  </footer>
-                </>
-              </ProjectCard>
-            ))}
-          </div>
-        )}
-      </section>
+              <rect width="36" height="36" x="6" y="6" fill="#1976d2" />
+              <polygon
+                fill="#fff"
+                points="27.49,22 14.227,22 14.227,25.264 18.984,25.264 18.984,40 22.753,40 22.753,25.264 27.49,25.264"
+              />
+              <path
+                fill="#fff"
+                d="M39.194,26.084c0,0-1.787-1.192-3.807-1.192s-2.747,0.96-2.747,1.986 c0,2.648,7.381,2.383,7.381,7.712c0,8.209-11.254,4.568-11.254,4.568V35.22c0,0,2.152,1.622,4.733,1.622s2.483-1.688,2.483-1.92 c0-2.449-7.315-2.449-7.315-7.878c0-7.381,10.658-4.469,10.658-4.469L39.194,26.084z"
+              />
+            </svg>{' '}
+          </h2>
+          <ul>
+            {loading ? (
+              <>
+                <ContentLoader
+                  speed={2}
+                  width={400}
+                  height={160}
+                  viewBox="0 0 400 160"
+                  backgroundColor="#000001"
+                  foregroundColor="#111"
+                >
+                  <rect x="48" y="8" rx="3" ry="3" width="88" height="6" />
+                  <rect x="48" y="26" rx="3" ry="3" width="52" height="6" />
+                  <rect x="0" y="56" rx="3" ry="3" width="410" height="6" />
+                  <rect x="0" y="72" rx="3" ry="3" width="380" height="6" />
+                  <rect x="0" y="88" rx="3" ry="3" width="178" height="6" />
+                  <circle cx="20" cy="20" r="20" />
+                </ContentLoader>
+                <ContentLoader
+                  speed={2}
+                  width={400}
+                  height={160}
+                  viewBox="0 0 400 160"
+                  backgroundColor="#000001"
+                  foregroundColor="#111"
+                >
+                  <rect x="48" y="8" rx="3" ry="3" width="88" height="6" />
+                  <rect x="48" y="26" rx="3" ry="3" width="52" height="6" />
+                  <rect x="0" y="56" rx="3" ry="3" width="410" height="6" />
+                  <rect x="0" y="72" rx="3" ry="3" width="380" height="6" />
+                  <rect x="0" y="88" rx="3" ry="3" width="178" height="6" />
+                  <circle cx="20" cy="20" r="20" />
+                </ContentLoader>
+                <ContentLoader
+                  speed={2}
+                  width={400}
+                  height={160}
+                  viewBox="0 0 400 160"
+                  backgroundColor="#000001"
+                  foregroundColor="#111"
+                >
+                  <rect x="48" y="8" rx="3" ry="3" width="88" height="6" />
+                  <rect x="48" y="26" rx="3" ry="3" width="52" height="6" />
+                  <rect x="0" y="56" rx="3" ry="3" width="410" height="6" />
+                  <rect x="0" y="72" rx="3" ry="3" width="380" height="6" />
+                  <rect x="0" y="88" rx="3" ry="3" width="178" height="6" />
+                  <circle cx="20" cy="20" r="20" />
+                </ContentLoader>
+              </>
+            ) : (
+              <>
+                {repos.map((repo) => {
+                  if (repo.language === 'TypeScript') {
+                    return (
+                      <ProjectCard key={repo.id}>
+                        <>
+                          <header>
+                            <a
+                              target="_blank"
+                              rel="noreferrer"
+                              href={repo.html_url}
+                            >
+                              {repo.name}
+                            </a>
+                            <BsGithub className="icon" />
+                          </header>
+                          <p>{repo.description}</p>
+                          <footer>
+                            <span>{repo.stargazers_count}</span>
+                            <AiFillStar />
+                          </footer>
+                        </>
+                      </ProjectCard>
+                    );
+                  }
+                  return '';
+                })}
+              </>
+            )}
+          </ul>
+          <h2 className="flex items-center gap-2">
+            Python <FaPython style={{ color: '#2a70aa' }} />{' '}
+          </h2>
+          <ul>
+            {loading ? (
+              <>
+                <ContentLoader
+                  speed={2}
+                  width={400}
+                  height={160}
+                  viewBox="0 0 400 160"
+                  backgroundColor="#000001"
+                  foregroundColor="#111"
+                >
+                  <rect x="48" y="8" rx="3" ry="3" width="88" height="6" />
+                  <rect x="48" y="26" rx="3" ry="3" width="52" height="6" />
+                  <rect x="0" y="56" rx="3" ry="3" width="410" height="6" />
+                  <rect x="0" y="72" rx="3" ry="3" width="380" height="6" />
+                  <rect x="0" y="88" rx="3" ry="3" width="178" height="6" />
+                  <circle cx="20" cy="20" r="20" />
+                </ContentLoader>
+                <ContentLoader
+                  speed={2}
+                  width={400}
+                  height={160}
+                  viewBox="0 0 400 160"
+                  backgroundColor="#000001"
+                  foregroundColor="#111"
+                >
+                  <rect x="48" y="8" rx="3" ry="3" width="88" height="6" />
+                  <rect x="48" y="26" rx="3" ry="3" width="52" height="6" />
+                  <rect x="0" y="56" rx="3" ry="3" width="410" height="6" />
+                  <rect x="0" y="72" rx="3" ry="3" width="380" height="6" />
+                  <rect x="0" y="88" rx="3" ry="3" width="178" height="6" />
+                  <circle cx="20" cy="20" r="20" />
+                </ContentLoader>
+                <ContentLoader
+                  speed={2}
+                  width={400}
+                  height={160}
+                  viewBox="0 0 400 160"
+                  backgroundColor="#000001"
+                  foregroundColor="#111"
+                >
+                  <rect x="48" y="8" rx="3" ry="3" width="88" height="6" />
+                  <rect x="48" y="26" rx="3" ry="3" width="52" height="6" />
+                  <rect x="0" y="56" rx="3" ry="3" width="410" height="6" />
+                  <rect x="0" y="72" rx="3" ry="3" width="380" height="6" />
+                  <rect x="0" y="88" rx="3" ry="3" width="178" height="6" />
+                  <circle cx="20" cy="20" r="20" />
+                </ContentLoader>
+              </>
+            ) : (
+              <>
+                {repos.map((repo) => {
+                  if (repo.language === 'Python') {
+                    return (
+                      <ProjectCard key={repo.id}>
+                        <>
+                          <header>
+                            <a
+                              target="_blank"
+                              rel="noreferrer"
+                              href={repo.html_url}
+                            >
+                              {repo.name}
+                            </a>
+                            <BsGithub className="icon" />
+                          </header>
+                          <p>{repo.description}</p>
+                          <footer>
+                            <span>{repo.stargazers_count}</span>
+                            <AiFillStar />
+                          </footer>
+                        </>
+                      </ProjectCard>
+                    );
+                  }
+                  return '';
+                })}
+              </>
+            )}
+          </ul>
+        </div>
+      </StyledProjects>
     </main>
   );
 };
-
-export async function getServerSideProps() {
-  const httpLink = createHttpLink({
-    uri: 'https://api.github.com/graphql',
-  });
-
-  const authLink = setContext((_, { headers }) => {
-    return {
-      headers: {
-        ...headers,
-        authorization: `Bearer ${process.env.GITHUB_ACCESS_TOKEN}`,
-      },
-    };
-  });
-
-  const client = new ApolloClient({
-    ssrMode: true,
-    link: authLink.concat(httpLink),
-    cache: new InMemoryCache(),
-  });
-
-  const { data } = await client.query({
-    query: gql`
-      {
-        user(login: "mustafamertgoksu") {
-          pinnedItems(first: 6) {
-            totalCount
-            edges {
-              node {
-                ... on Repository {
-                  id
-                  name
-                  url
-                  stargazerCount
-                  description
-                }
-              }
-            }
-          }
-        }
-      }
-    `,
-  });
-
-  const { user } = data;
-  const pinnedItems = user.pinnedItems.edges.map(({ node }: any) => node);
-
-  return {
-    props: {
-      pinnedItems,
-    },
-  };
-}
 
 export default Projects;
