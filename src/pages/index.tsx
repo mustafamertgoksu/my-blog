@@ -204,7 +204,7 @@ const Home: NextPage<Props> = ({ posts, pinnedItems }) => {
   );
 };
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const posts = getAllPosts();
   const httpLink = createHttpLink({
     uri: 'https://api.github.com/graphql',
