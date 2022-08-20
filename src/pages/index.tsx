@@ -7,7 +7,6 @@ import { datas } from '../datas';
 import { AiFillStar } from 'react-icons/ai';
 import { BsGithub } from 'react-icons/bs';
 import ContentLoader from 'react-content-loader';
-import { topProjects } from '../datas';
 import Image from 'next/image';
 import Typewriter from 'typewriter-effect';
 import TypewriterComponent from 'typewriter-effect';
@@ -15,13 +14,22 @@ import Techs from '../components/techs';
 import { getAllPosts } from '../lib/posts';
 import Link from 'next/link';
 import aboutStyles from '../styles/about.module.css';
-import projectStyles from '../styles/projects.module.css';
+import {
+  ApolloClient,
+  createHttpLink,
+  InMemoryCache,
+  gql,
+} from '@apollo/client';
+
+import { setContext } from '@apollo/client/link/context';
+import {ProjectCard} from '../styles/project.styles';
 
 type Props = {
   posts: any;
+  pinnedItems: any;
 };
 
-const Home: NextPage<Props> = ({ posts }) => {
+const Home: NextPage<Props> = ({ posts, pinnedItems }) => {
   const { setTitle } = useTitle();
   const { isLightMode } = useToggleTheme();
   const [loading, setLoading] = useState(true);
@@ -127,46 +135,22 @@ const Home: NextPage<Props> = ({ posts }) => {
           </>
         ) : (
           <div className="">
-            {topProjects.map((repo: any) => (
-              <a
-                href={repo.html_url}
-                key={repo.name}
-                target="blank"
-                rel="noreferrer"
-                className={
-                  isLightMode
-                    ? projectStyles.lightProject
-                    : projectStyles.project
-                }
-              >
-                <div
-                  className={
-                    !isLightMode
-                      ? projectStyles.eachProject
-                      : projectStyles.lightEachProject
-                  }
-                >
-                  <header className="flex justify-between px-4">
-                    <span className={projectStyles.projectTitle}>
+            {pinnedItems.map((repo: any) => (
+              <ProjectCard key={repo.id}>
+                <>
+                  <header>
+                    <a target="_blank" rel="noreferrer" href={repo.url}>
                       {repo.name}
-                    </span>
-                    <BsGithub className="text-2xl text-white" />
+                    </a>
+                    <BsGithub className="icon" />
                   </header>
-                  <main className={'px-6 py-4 text-blue-500'}>
-                    {repo.description}
-                  </main>
-                  <footer className="flex items-center justify-between px-4">
-                    <span className="text-gray-50 flex gap-2">
-                      <Image src={repo.image} width="23" height="20" alt="" />
-                      {repo.language}
-                    </span>
-                    <span className="text-white flex items-center gap-2">
-                      {repo.stargazers_count}
-                      <AiFillStar className="text-amber-500" />
-                    </span>
+                  <p>{repo.description}</p>
+                  <footer>
+                    <span>{repo.stargazerCount}</span>
+                    <AiFillStar />
                   </footer>
-                </div>
-              </a>
+                </>
+              </ProjectCard>
             ))}
           </div>
         )}
@@ -222,10 +206,59 @@ const Home: NextPage<Props> = ({ posts }) => {
 
 export async function getServerSideProps() {
   const posts = getAllPosts();
+  const httpLink = createHttpLink({
+    uri: 'https://api.github.com/graphql',
+  });
+
+  const authLink = setContext((_, { headers }) => {
+    return {
+      headers: {
+        ...headers,
+
+        authorization: `Bearer ${process.env.GITHUB_ACCESS_TOKEN}`,
+      },
+    };
+  });
+
+  const client = new ApolloClient({
+    link: authLink.concat(httpLink),
+
+    cache: new InMemoryCache(),
+  });
+
+  const { data } = await client.query({
+    query: gql`
+      {
+        user(login: "mustafamertgoksu") {
+          pinnedItems(first: 6) {
+            totalCount
+            edges {
+              node {
+                ... on Repository {
+                  id
+                  name
+                  url
+                  stargazerCount
+                  description
+                  owner {
+                    avatarUrl
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    `,
+  });
+
+  const { user } = data;
+  const pinnedItems = user.pinnedItems.edges.map(({ node }: any) => node);
 
   return {
     props: {
       posts,
+      pinnedItems,
     },
   };
 }

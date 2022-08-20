@@ -203,49 +203,5 @@ export const githubDiscussion: Discussion = {
 
 type Projects = any;
 
-export const topProjects: Projects = [
-  {
-    name: 'My Website',
-    description: 'My personal website',
-    html_url: 'https://github.com/mustafamertgoksu/my-blog',
-    language: 'TypeScript',
-    stargazers_count: '1',
-    image: '/images/typescript.svg',
-  },
-  {
-    name: 'Quiz App',
-    description: 'Quiz App with React and TypeScript',
-    html_url: 'https://github.com/mustafamertgoksu/Quiz-App',
-    language: 'TypeScript',
-    stargazers_count: '5',
-    image: '/images/typescript.svg',
-  },
-  {
-    name: 'Countries App',
-    description: 'Frontend Mentor countries app solution with Next.js',
-    language: 'TypeScript',
-    stargazers_count: '3',
-    html_url: 'https://github.com/mustafamertgoksu/countries-app',
-    image: '/images/typescript.svg',
-  },
-  {
-    name: 'Chatlify',
-    description:
-      'Chatlify is a open source chat app built with Next.js and Socket.io',
-    language: 'TypeScript',
-    stargazers_count: '3',
-    html_url: 'https://github.com/mustafamertgoksu/chatlify',
-    image: '/images/typescript.svg',
-  },
-  {
-    name: 'Typing Test App',
-    description: ' Typing Test App with ReactJS ',
-    language: 'JavaScript',
-    stargazers_count: '2',
-    html_url: 'https://github.com/mustafamertgoksu/typing-test-app',
-    image: '/images/javascript.svg',
-  },
-];
-
 const NextIcon = '/nextdotjs.svg';
 const NextLightIcon = '/nextdotjslight.svg';
