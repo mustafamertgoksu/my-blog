@@ -215,7 +215,7 @@ export async function getServerSideProps() {
       headers: {
         ...headers,
 
-        authorization: `Bearer ${"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"}`,
+        authorization: `Bearer ${process.env.GITHUB_ACCESS_TOKEN}`,
       },
     };
   });
