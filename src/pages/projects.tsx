@@ -31,8 +31,6 @@ const Projects: NextPage<Props> = ({ pinnedItems }) => {
     setLoading(false);
   };
 
-  const getRepos = async () => {};
-
   useEffect(() => {
     setTitle('Projects');
     searchTopRepos();
@@ -132,7 +130,6 @@ export async function getServerSideProps() {
     return {
       headers: {
         ...headers,
-
         authorization: `Bearer ${process.env.GITHUB_ACCESS_TOKEN}`,
       },
     };
@@ -141,7 +138,6 @@ export async function getServerSideProps() {
   const client = new ApolloClient({
     ssrMode: true,
     link: authLink.concat(httpLink),
-
     cache: new InMemoryCache(),
   });
 
@@ -159,9 +155,6 @@ export async function getServerSideProps() {
                   url
                   stargazerCount
                   description
-                  owner {
-                    avatarUrl
-                  }
                 }
               }
             }
