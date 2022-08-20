@@ -139,6 +139,7 @@ export async function getServerSideProps() {
   });
 
   const client = new ApolloClient({
+    ssrMode: true,
     link: authLink.concat(httpLink),
 
     cache: new InMemoryCache(),
