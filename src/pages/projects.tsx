@@ -38,7 +38,13 @@ const Projects: NextPage = () => {
     <main className="container">
       <StyledProjects>
         <div className="projects-container">
-          <h2 className="flex items-center gap-2">
+          <h2
+            className={
+              !isLightMode
+                ? 'flex items-center gap-2 text-gray-200 text-2xl font-semibold'
+                : 'flex items-center gap-2 text-gray-900 text-2xl font-semibold'
+            }
+          >
             JavaScript <SiJavascript style={{ color: '#f0db4f' }} />
           </h2>
           <ul>
@@ -121,7 +127,13 @@ const Projects: NextPage = () => {
               </>
             )}
           </ul>
-          <h2 className="flex items-center gap-2">
+          <h2
+            className={
+              !isLightMode
+                ? 'flex items-center gap-2 text-gray-200 text-2xl font-semibold'
+                : 'flex items-center gap-2 text-gray-900 text-2xl font-semibold'
+            }
+          >
             TypeScript{' '}
             <svg
               id="typescript"
@@ -219,7 +231,13 @@ const Projects: NextPage = () => {
               </>
             )}
           </ul>
-          <h2 className="flex items-center gap-2">
+          <h2
+            className={
+              !isLightMode
+                ? 'flex items-center gap-2 text-gray-200 text-2xl font-semibold'
+                : 'flex items-center gap-2 text-gray-900 text-2xl font-semibold'
+            }
+          >
             Python <FaPython style={{ color: '#2a70aa' }} />{' '}
           </h2>
           <ul>

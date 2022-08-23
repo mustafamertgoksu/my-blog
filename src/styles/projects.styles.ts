@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyledProjects = styled.div`
   width: 100%;
@@ -7,16 +7,11 @@ export const StyledProjects = styled.div`
   align-items: center;
   flex-direction: column;
   padding: 2rem 1rem;
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   .projects-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    h1,
-    h2,
-    h3 {
-      color: #eee;
-    }
     h2 {
       padding: 0.4rem;
       margin-left: 0.5rem;
@@ -54,7 +49,7 @@ export const ProjectCard = styled.li`
   padding: 2rem;
   border-radius: 0.5rem;
   background-color: #000001;
-  opacity: 0.75;
+  opacity: 0.9;
   gap: 0.3rem;
   margin: 1rem 0;
   @media (max-width: 429px) {
