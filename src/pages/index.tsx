@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useTitle } from '../hooks/useTitle';
 import styles from '../styles/home.module.css';
 import { useToggleTheme } from '../hooks/useToggleTheme';
