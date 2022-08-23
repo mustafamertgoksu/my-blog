@@ -86,6 +86,7 @@ const Home: NextPage<Props> = ({ posts }) => {
                 <div className="flex">
                   <Image
                     src={post.image}
+                    className={styles.postImage}
                     alt={post.title}
                     width="30"
                     height="30"

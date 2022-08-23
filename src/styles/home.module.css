@@ -11,11 +11,11 @@
 }
 
 .postCard {
-  @apply cursor-pointer flex flex-col items-center justify-center bg-[#111] px-2 py-1 w-96 h-24 opacity-80 hover:opacity-95 my-2 rounded
+  @apply cursor-pointer flex flex-col items-center justify-center bg-[#111] w-[26rem] h-[7.5rem] opacity-80 hover:opacity-95 my-2 rounded
 }
 
 .lightPostCard {
-  @apply cursor-pointer flex flex-col items-center justify-center bg-slate-900 px-2 py-1 w-96 h-24 opacity-90 hover:opacity-80 my-2 rounded
+  @apply cursor-pointer flex flex-col items-center justify-center bg-slate-900 px-2 py-1 w-[26rem] h-[7.5rem] opacity-90 hover:opacity-80 my-2 rounded
 }
 
 @media (max-width: 620px) {
@@ -24,6 +24,9 @@
   }
   .lightPostCard {
   @apply w-80
+  }
+  .postImage {
+      display: none !important;
   }
 }
 

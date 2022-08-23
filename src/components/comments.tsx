@@ -3,7 +3,6 @@ import styles from '../styles/comments.module.css';
 import { useToggleTheme } from '../hooks/useToggleTheme';
 
 const Comments = () => {
-  const { isLightMode } = useToggleTheme();
   return (
     <div className={styles.comments}>
       <Giscus
@@ -12,7 +11,7 @@ const Comments = () => {
         category="General"
         categoryId="DIC_kwDOHzAte84CQuhn"
         mapping="pathname"
-        reactionsEnabled="0"
+        reactionsEnabled="1"
         emitMetadata="0"
         theme="dark"
       />

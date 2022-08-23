@@ -1,0 +1,51 @@
+---
+title: What is GraphQL and how does it works?
+image: /images/graphql.svg
+date: 23.08.2022
+---
+
+import Comments from '../../components/comments';
+import styles from '../../styles/mdx.module.css';
+
+<div className={styles.mdxContainer}>
+  # What is GraphQL?
+  <ul>
+    <li>
+  ### GraphQL is a query language and server-side runtime for application programming interfaces (APIs) that prioritizes giving clients exactly the data they request and no more. 
+  ### GraphQL is designed to make it easier to build a rich and performant API.
+    </li>
+
+    <li>
+      ## How does it works?
+
+      ### In a simple GraphQL service, the incoming query is parsed, and the query fields are resolved against the schema to produce the result. The result is then serialized to JSON and returned to the client.
+    </li>
+
+    <li>
+      ## Example GraphQL query
+
+  ```graphql
+  query {
+    comments {
+      id
+      text
+    }
+  }
+  ```
+    </li>
+
+  <li>
+## Example GraphQL schema
+  ```graphql
+  type Query {
+    comments: [Comment]
+  }
+  type Comment {
+    id: ID!
+    text: String
+  }
+  ```
+  </li>
+  </ul>
+  <Comments />
+</div>
