@@ -29,6 +29,13 @@
   color: #3d6263;
 }
 
+.mdxContainer h3 p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #3d6263;
+}
+
 .mdxContainer p {
   font-size: 1.2rem;
   margin-bottom: 1rem;
