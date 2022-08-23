@@ -12,27 +12,19 @@ import ContentLoader from 'react-content-loader';
 import { StyledProjects, ProjectCard } from '../styles/projects.styles';
 import { ApiType } from '../types/githubAPIType';
 
-const Projects: NextPage = () => {
+type Props = {
+  repos: ApiType[];
+};
+
+const Projects: NextPage<Props> = ({ repos }) => {
   const { setTitle } = useTitle();
   const { isLightMode } = useToggleTheme();
 
-  const [loading, setLoading] = useState(false);
-  const [repos, setRepos] = useState([] as ApiType[]);
-
-  const searchRepos = async () => {
-    try {
-      setLoading(true);
-      const { data } = await axios.get<ApiType[]>(githubRepositoriesURL);
-      setLoading(false);
-      setRepos(data);
-    } catch {
-      console.log('error');
-    }
-  };
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setTitle('Projects');
-    searchRepos();
+    setLoading(false);
   }, []);
   return (
     <main className="container">
@@ -325,5 +317,15 @@ const Projects: NextPage = () => {
     </main>
   );
 };
+
+export async function getServerSideProps() {
+  const res = await axios.get(githubRepositoriesURL);
+  const repos = await res.data;
+  return {
+    props: {
+      repos,
+    },
+  };
+}
 
 export default Projects;
