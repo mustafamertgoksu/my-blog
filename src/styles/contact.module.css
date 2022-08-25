@@ -3,7 +3,7 @@
 }
 
 .lightContact {
-  @apply border p-4 flex flex-col rounded-md w-2/3 bg-[#111] shadow-neutral-900 shadow-lg;
+  @apply border p-4 flex flex-col rounded-md w-2/3 bg-slate-800 shadow-neutral-900 shadow-lg;
 }
 
 .userText {
@@ -22,6 +22,10 @@
   @apply bg-gray-200 p-2 rounded text-slate-800
 }
 
+.lightInput::placeholder {
+  @apply text-slate-600;
+}
+
 .textarea {
   @apply border-2 border-gray-500 rounded-md p-2 w-full h-32 resize-none bg-slate-800 text-gray-200;
 }
@@ -30,10 +34,14 @@
   @apply border-2 border-gray-500 rounded-md p-2 w-full h-32 resize-none bg-gray-200 text-black;
 }
 
+.lightTextarea::placeholder {
+  @apply text-slate-600;
+}
+
 .sendBtn {
-  @apply w-full h-8 bg-blue-900 my-2 rounded
+  @apply w-full h-8 bg-blue-900 my-2 rounded text-white
 }
 
 .lightSendBtn {
-  @apply w-full h-8 bg-blue-900 my-2 rounded
+  @apply w-full h-8 bg-blue-900 my-2 rounded text-white
 }

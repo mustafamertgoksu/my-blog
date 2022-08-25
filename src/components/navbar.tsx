@@ -18,8 +18,6 @@ const Navbar = () => {
     }
   };
 
-  // isLightMode ? styles.lightNavbar : styles.navbar
-
   return (
     <nav
       className={
@@ -56,26 +54,34 @@ const Navbar = () => {
       <div className={styles.navleft}>
         <ul className={styles.navList}>
           <li className={styles.navItem}>
-            <Link href="/">
-              <a className={isLightMode ? styles.lightNavLink : styles.navLink}>
-                Home
-              </a>
-            </Link>
-            <Link href="/about">
-              <a className={isLightMode ? styles.lightNavLink : styles.navLink}>
-                About
-              </a>
-            </Link>
-            <Link href="/projects">
-              <a className={isLightMode ? styles.lightNavLink : styles.navLink}>
-                Projects
-              </a>
-            </Link>
-            <Link href="/travel">
-              <a className={isLightMode ? styles.lightNavLink : styles.navLink}>
-                Travel
-              </a>
-            </Link>
+            <span
+              className={isLightMode ? styles.lightNavLink : styles.navLink}
+            >
+              <Link href="/">
+                <a>Home</a>
+              </Link>
+            </span>
+            <span
+              className={isLightMode ? styles.lightNavLink : styles.navLink}
+            >
+              <Link href="/about">
+                <a>About</a>
+              </Link>
+            </span>
+            <span
+              className={isLightMode ? styles.lightNavLink : styles.navLink}
+            >
+              <Link href="/projects">
+                <a>Projects</a>
+              </Link>
+            </span>
+            <span
+              className={isLightMode ? styles.lightNavLink : styles.navLink}
+            >
+              <Link href="/travel">
+                <a>Travel</a>
+              </Link>
+            </span>
           </li>
         </ul>
       </div>

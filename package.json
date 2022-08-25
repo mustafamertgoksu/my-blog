@@ -9,15 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@apollo/client": "^3.6.9",
+    "@formspree/react": "^2.3.3",
     "@giscus/react": "^2.2.0",
     "@mdx-js/loader": "^2.1.2",
     "@next/mdx": "^12.2.4",
-    "@octokit/request": "^6.2.0",
     "@types/react-content-loader": "^4.0.0",
     "@types/styled-components": "^5.1.26",
     "axios": "^0.27.2",
-    "graphql": "^16.6.0",
     "gray-matter": "^4.0.3",
     "next": "^12.2.5",
     "next-pwa": "^5.5.5",

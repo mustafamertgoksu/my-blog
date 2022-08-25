@@ -37,7 +37,6 @@ const Contact: React.FC = () => {
         type="email"
         id="contact-email"
         className={!isLightMode ? styles.input : styles.lightInput}
-        autoComplete="off"
         placeholder="you@mail.com"
         {...register('email', { required: true })}
       />
@@ -52,7 +51,6 @@ const Contact: React.FC = () => {
         id="contact-name"
         className={!isLightMode ? styles.input : styles.lightInput}
         placeholder="John Doe"
-        autoComplete="off"
         {...register('name', { required: false })}
       />
       <label

@@ -61,11 +61,11 @@ const Layout: FC<Props> = ({ children }) => {
         className={isLightMode ? styles.lightWrapper : styles.wrapper}
         onScroll={changeNavBackground}
       >
+        <div id="#" className="hidden"></div>
         <Navbar />
-        <div id="scrollTop" className="hidden"></div>
         <Main>{children}</Main>
         {scrollIcon && (
-          <ScrollTopButton href="#scrollTop">
+          <ScrollTopButton href="##">
             <AiOutlineArrowUp className="text-white text-lg" />
           </ScrollTopButton>
         )}
