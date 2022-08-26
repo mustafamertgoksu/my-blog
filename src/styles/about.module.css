@@ -70,7 +70,7 @@
   }
 
   .aboutCard:hover {
-    @apply w-80 h-80 my-4 rounded text-[1.325rem] px-8 py-5 text-white opacity-90
+    @apply w-80 h-80 my-4 rounded text-[1.325rem] px-8 py-5 text-white opacity-90 scale-105
   }
 
   .lightAboutCard {

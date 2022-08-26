@@ -23,7 +23,7 @@
     @apply w-80
   }
   .lightPostCard {
-  @apply w-80
+    @apply w-80
   }
   .postImage {
       display: none !important;
