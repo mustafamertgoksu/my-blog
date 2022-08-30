@@ -70,7 +70,7 @@ export const TechsIcons: {
     dark: false,
   },
   {
-    name: 'Styled Components',
+    name: 'Styled C.',
     image: '/images/styledcomponents.svg',
     color: '#DB7093',
     dark: false,
@@ -82,7 +82,7 @@ export const TechsIcons: {
     dark: false,
   },
   {
-    name: 'React Query',
+    name: 'React Q.',
     image: '/images/reactquery.svg',
     color: '#FF4154',
     dark: false,
@@ -94,7 +94,7 @@ export const TechsIcons: {
     dark: false,
   },
   {
-    name: 'Nest.js',
+    name: 'Nest',
     image: '/images/nestjs.svg',
     color: '#E0234E',
     dark: false,
@@ -112,21 +112,9 @@ export const TechsIcons: {
     dark: false,
   },
   {
-    name: 'Passport',
-    image: '/images/passport.svg',
-    color: '#34E27A',
-    dark: false,
-  },
-  {
     name: 'PostgreSQL',
     image: '/images/postgresql.svg',
     color: '#4169E1',
-    dark: false,
-  },
-  {
-    name: 'Docker',
-    image: '/images/docker.svg',
-    color: '#2496ED',
     dark: false,
   },
   {
