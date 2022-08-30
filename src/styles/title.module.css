@@ -1,0 +1,7 @@
+.title {
+  @apply text-gray-50 opacity-50 text-center text-3xl my-4
+}
+
+.lightTitle {
+  @apply text-neutral-900 text-center text-3xl my-4
+}

@@ -9,8 +9,8 @@ const AboutSection = () => {
   return (
     <section className={styles.aboutSection}>
       <h2 className={!isLightMode ? styles.siteTitle : styles.lightSiteTitle}>
-        👋 Hey, {"I'm  "}
-        <div className="mx-2">
+        👋 Hey, {"I'm"}&nbsp;
+        <div>
           <TypewriterComponent
             onInit={(typeWriter) =>
               typeWriter.typeString(datas.siteTitle).start()

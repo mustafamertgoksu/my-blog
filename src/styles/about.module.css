@@ -101,11 +101,11 @@
 }
 
 .siteTitle {
-  @apply flex text-3xl text-neutral-300 opacity-70
+  @apply flex text-3xl text-neutral-300 opacity-70 mb-5
 }
 
 .lightSiteTitle {
-  @apply flex text-3xl text-black opacity-90
+  @apply flex text-3xl text-black opacity-90 mb-5
 }
 
 @media(max-width: 768px) {
