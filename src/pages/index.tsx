@@ -3,15 +3,12 @@ import { useEffect } from 'react';
 import { useTitle } from '../hooks/useTitle';
 import styles from '../styles/home.module.css';
 import { useToggleTheme } from '../hooks/useToggleTheme';
-import { datas } from '../datas';
 import Image from 'next/image';
-import Typewriter from 'typewriter-effect';
-import TypewriterComponent from 'typewriter-effect';
 import Techs from '../components/techs';
 import { getAllPosts } from '../lib/posts';
 import Link from 'next/link';
-import aboutStyles from '../styles/about.module.css';
 import Title from '../components/title';
+import AboutSection from '../components/aboutSection';
 
 type Props = {
   posts: [];
@@ -25,38 +22,7 @@ const Home: NextPage<Props> = ({ posts }) => {
   }, []);
   return (
     <div className="container">
-      <section className={aboutStyles.aboutSection}>
-        <h2
-          className={
-            !isLightMode ? aboutStyles.siteTitle : aboutStyles.lightSiteTitle
-          }
-        >
-          👋 Hey, {"I'm  "}
-          <div className="mx-2">
-            <TypewriterComponent
-              onInit={(typeWriter) =>
-                typeWriter.typeString(datas.siteTitle).start()
-              }
-            />
-          </div>
-        </h2>
-        <h2
-          className={
-            !isLightMode
-              ? 'my-5 text-2xl text-green-600'
-              : 'my-5 text-2xl text-green-900'
-          }
-        >
-          Who Am I?
-        </h2>
-        <div
-          className={
-            !isLightMode ? aboutStyles.aboutCard : aboutStyles.lightAboutCard
-          }
-        >
-          {datas.aboutParagraph}
-        </div>
-      </section>
+      <AboutSection />
       <section className={styles.techs}>
         <Title
         >

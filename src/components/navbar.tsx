@@ -3,7 +3,7 @@ import Link from "next/link";
 import { BsMoonFill, BsSun } from "react-icons/bs";
 import { useToggleTheme } from "../hooks/useToggleTheme";
 import { HiMenuAlt1 } from "react-icons/hi";
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { NavbarContext } from "../context/navbar.context";
 
 const Navbar = () => {
