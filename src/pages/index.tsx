@@ -11,6 +11,7 @@ import Techs from '../components/techs';
 import { getAllPosts } from '../lib/posts';
 import Link from 'next/link';
 import aboutStyles from '../styles/about.module.css';
+import Title from '../components/title';
 
 type Props = {
   posts: [];
@@ -56,24 +57,18 @@ const Home: NextPage<Props> = ({ posts }) => {
           {datas.aboutParagraph}
         </div>
       </section>
-      <section className={aboutStyles.techs}>
-        <h2
-          className={
-            !isLightMode
-              ? 'text-gray-50 opacity-50 text-center text-3xl my-4'
-              : 'text-neutral-900 text-center text-3xl my-4'
-          }
+      <section className={styles.techs}>
+        <Title
         >
           Technologies i use
-        </h2>
+        </Title>
         <Techs />
       </section>
       <section className={styles.posts}>
-        <h2
-          className={!isLightMode ? styles.postsTitle : styles.lightPostsTitle}
+        <Title
         >
           Recent Blog Posts
-        </h2>
+        </Title>
         {posts.map((post: any, index: any) => (
           <div key={index}>
             <Link href={`/content/${post.slug}`}>

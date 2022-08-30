@@ -10,7 +10,9 @@ import { NavbarContext } from '../context/navbar.context';
 import { useContext } from 'react';
 import styled from 'styled-components';
 import { AiOutlineArrowUp } from 'react-icons/ai';
+
 type Props = { children: React.ReactNode };
+
 const Main = styled.main`
   width: 100%;
   display: flex;

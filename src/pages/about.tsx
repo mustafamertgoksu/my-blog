@@ -6,10 +6,10 @@ import styles from '../styles/about.module.css';
 import { datas } from '../datas';
 import TypewriterComponent from 'typewriter-effect';
 import Typewriter from 'typewriter-effect';
-import Techs from '../components/techs';
 import { SocialLinks } from '../datas';
 import Image from 'next/image';
 import Contact from '../components/contact';
+import Title from '../components/title';
 
 const About: NextPage = () => {
   const { setTitle } = useTitle();
@@ -46,28 +46,11 @@ const About: NextPage = () => {
           {datas.aboutParagraph}
         </div>
       </section>
-      <section className={styles.techs}>
-        <h2
-          className={
-            !isLightMode
-              ? 'text-gray-50 opacity-50 text-center text-3xl my-4'
-              : 'text-neutral-900 text-center text-3xl my-4'
-          }
-        >
-          Technologies i use
-        </h2>
-        <Techs />
-      </section>
       <section className={styles.myLinks}>
-        <h2
-          className={
-            !isLightMode
-              ? 'text-gray-50 opacity-50 text-center text-3xl my-4'
-              : 'text-neutral-900 text-center text-3xl my-4'
-          }
+        <Title
         >
           My Links
-        </h2>
+        </Title>
         {SocialLinks.map((socialLink) => (
           <a
             className={!isLightMode ? styles.socialLink : styles.lightSocialLink}
@@ -79,15 +62,10 @@ const About: NextPage = () => {
         ))}
       </section>
       <section className={styles.contact}>
-        <h2
-          className={
-            !isLightMode
-              ? 'text-gray-50 opacity-50 text-center text-3xl my-4'
-              : 'text-neutral-900 text-center text-3xl my-4'
-          }
+        <Title
         >
           Contact Me
-        </h2>
+        </Title>
         <Contact />
       </section>
     </div>

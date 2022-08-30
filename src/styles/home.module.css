@@ -2,14 +2,6 @@
   @apply w-full flex flex-col items-center my-12
 }
 
-.postsTitle {
-  @apply flex text-3xl text-neutral-300 opacity-80 my-4
-}
-
-.lightPostsTitle {
-  @apply flex text-3xl text-black opacity-90 my-4
-}
-
 .postCard {
   @apply cursor-pointer flex flex-col items-center justify-center bg-[#111] w-[26rem] h-[7.5rem] opacity-80 hover:opacity-95 my-2 rounded
 }
@@ -36,5 +28,27 @@
   }
   .lightPostCard {
     @apply w-64
+  }
+}
+
+.techs {
+  @apply px-24
+}
+
+@media(max-width: 620px) {
+  .techs {
+    @apply px-10
+  }
+}
+
+@media(max-width: 500px) {
+  .techs {
+    @apply px-4
+  }
+}
+
+@media(max-width: 410px) {
+  .techs {
+    @apply px-1
   }
 }

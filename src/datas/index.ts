@@ -188,8 +188,3 @@ export const githubDiscussion: Discussion = {
   emitMetadata: '0',
   theme: 'dark',
 };
-
-type Projects = any;
-
-const NextIcon = '/nextdotjs.svg';
-const NextLightIcon = '/nextdotjslight.svg';
