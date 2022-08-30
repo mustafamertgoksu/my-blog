@@ -3,11 +3,11 @@
 }
 
 .aboutCard {
-  @apply bg-[#111] w-96 h-80 my-4 text-[1.450rem] rounded px-8 py-5 text-white opacity-70 transition-all
+  @apply bg-[#111] w-96 h-80 my-6 text-[1.450rem] rounded px-8 py-5 text-white opacity-70 transition-all
 }
 
 .lightAboutCard {
-  @apply bg-gray-900 w-96 h-80 my-4 text-[1.450rem] rounded px-8 py-5 text-white opacity-90 transition-all
+  @apply bg-gray-900 w-96 h-80 my-6 text-[1.450rem] rounded px-8 py-5 text-white opacity-90 transition-all
 }
 
 /* About Card Animation */
@@ -35,7 +35,7 @@
 }
 
 .aboutCard:hover {
-  @apply w-96 my-4 h-80 text-[1.450rem] rounded px-8 py-5 text-white opacity-60 scale-110
+  @apply w-96 my-6 h-80 text-[1.450rem] rounded px-8 py-5 text-white opacity-60 scale-110
 }
 
 .lightAboutCard::after {
@@ -61,20 +61,20 @@
 }
 
 .lightAboutCard:hover {
-  @apply bg-gray-900 my-4 w-96 h-80 text-[1.450rem] rounded px-8 py-5 text-white opacity-95 scale-110
+  @apply bg-gray-900 my-6 w-96 h-80 text-[1.450rem] rounded px-8 py-5 text-white opacity-95 scale-110
 }
 
 @media(max-width: 768px) {
   .aboutCard {
-    @apply w-80 h-80 my-4 text-[1.325rem]
+    @apply w-80 h-80 my-6 text-[1.325rem]
   }
 
   .aboutCard:hover {
-    @apply w-80 h-80 my-4 rounded text-[1.325rem] px-8 py-5 text-white opacity-90 scale-105
+    @apply w-80 h-80 my-6 rounded text-[1.325rem] px-8 py-5 text-white opacity-90 scale-105
   }
 
   .lightAboutCard {
-    @apply w-80 h-80 my-4 text-[1.325rem]
+    @apply w-80 h-80 my-6 text-[1.325rem]
   }
 
   .lightAboutCard:hover {
@@ -84,19 +84,19 @@
 
 @media (max-width: 350px) {
   .aboutCard {
-    @apply w-64 h-64 my-4 text-base
+    @apply w-64 h-64 my-6 text-base
   }
 
   .aboutCard:hover {
-    @apply w-64 h-64 my-4 rounded text-base px-8 py-5 text-white opacity-90
+    @apply w-64 h-64 my-6 rounded text-base px-8 py-5 text-white opacity-90
   }
 
   .lightAboutCard {
-    @apply w-64 h-64 my-4 text-base
+    @apply w-64 h-64 my-6 text-base
   }
 
   .lightAboutCard:hover {
-    @apply w-64 h-64 my-4 rounded text-base px-8 py-5 text-white opacity-90
+    @apply w-64 h-64 my-6 rounded text-base px-8 py-5 text-white opacity-90
   }
 }
 
