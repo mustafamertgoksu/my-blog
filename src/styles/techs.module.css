@@ -22,7 +22,7 @@
   @apply text-center text-zinc-900 font-semibold ml-2 mx-2;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 620px) {
   .techName {
     @apply hidden
   }
