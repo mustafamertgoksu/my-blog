@@ -21,4 +21,4 @@ export const getAllPosts = () => {
   const slugs = fs.readdirSync(root);
   const posts = slugs.map(slug => getPostMeta(slug));
   return posts;
-}
+};

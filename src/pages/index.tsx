@@ -9,9 +9,10 @@ import { getAllPosts } from '../lib/posts';
 import Link from 'next/link';
 import Title from '../components/title';
 import AboutSection from '../components/aboutSection';
+import { PostType } from '../types/postType';
 
 type Props = {
-  posts: [];
+  posts: PostType[];
 };
 
 const Home: NextPage<Props> = ({ posts }) => {
@@ -35,7 +36,7 @@ const Home: NextPage<Props> = ({ posts }) => {
         >
           Recent Blog Posts
         </Title>
-        {posts.map((post: any, index: any) => (
+        {posts.map((post, index: React.Key) => (
           <div key={index}>
             <Link href={`/content/${post.slug}`}>
               <div

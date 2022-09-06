@@ -11,8 +11,6 @@ import { useContext } from 'react';
 import styled from 'styled-components';
 import { AiOutlineArrowUp } from 'react-icons/ai';
 
-type Props = { children: React.ReactNode };
-
 const Main = styled.main`
   width: 100%;
   display: flex;
@@ -32,6 +30,10 @@ const ScrollTopButton = styled.a`
     display: none;
   }
 `;
+
+type Props = {
+   children: React.ReactNode 
+};
 
 const Layout: FC<Props> = ({ children }) => {
   const { title } = useTitle();
