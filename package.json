@@ -6,14 +6,14 @@
     "dev": "next dev",
     "build": "next build && next-sitemap",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "upgrade": "yarn upgrade-interactive --latest"
   },
   "dependencies": {
     "@formspree/react": "^2.3.3",
     "@giscus/react": "^2.2.0",
     "@mdx-js/loader": "^2.1.2",
     "@next/mdx": "^12.2.4",
-    "@types/react-content-loader": "^4.0.0",
     "@types/styled-components": "^5.1.26",
     "axios": "^0.27.2",
     "gray-matter": "^4.0.3",
