@@ -7,7 +7,7 @@ import { SocialLinks } from '../datas';
 import Image from 'next/image';
 import Contact from '../components/contact';
 import Title from '../components/title';
-import AboutSection from '../components/aboutSection';
+import AboutSection from '../components/about-section';
 
 const About: NextPage = () => {
   const { setTitle } = useTitle();

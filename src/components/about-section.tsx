@@ -1,6 +1,6 @@
 import Typewriter from 'typewriter-effect';
 import TypewriterComponent from 'typewriter-effect';
-import { datas } from '../datas';
+import { Datas } from '../datas';
 import styles from '../styles/about.module.css';
 import { useToggleTheme } from '../hooks/useToggleTheme';
 
@@ -13,7 +13,7 @@ const AboutSection = () => {
         <div>
           <TypewriterComponent
             onInit={(typeWriter) =>
-              typeWriter.typeString(datas.siteTitle).start()
+              typeWriter.typeString(Datas.siteTitle).start()
             }
           />
         </div>
@@ -28,7 +28,7 @@ const AboutSection = () => {
         Who Am I?
       </h2>
       <div className={!isLightMode ? styles.aboutCard : styles.lightAboutCard}>
-        {datas.aboutParagraph}
+        {Datas.aboutParagraph}
       </div>
     </section>
   );

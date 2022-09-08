@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import { useTitle } from '../hooks/useTitle';
 import { useToggleTheme } from '../hooks/useToggleTheme';
-import { githubRepositoriesURL } from '../datas';
+import { GithubRepositoriesURL } from '../datas';
 import { useState, useEffect } from 'react';
 import { AiFillStar } from 'react-icons/ai';
 import { BsGithub } from 'react-icons/bs';
@@ -319,7 +319,7 @@ const Projects: NextPage<Props> = ({ repos }) => {
 };
 
 export async function getServerSideProps() {
-  const res = await axios.get(githubRepositoriesURL);
+  const res = await axios.get(GithubRepositoriesURL);
   const repos = await res.data;
   return {
     props: {

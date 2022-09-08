@@ -4,7 +4,7 @@ import Footer from './footer';
 import Head from 'next/head';
 import styles from '../styles/layout.module.css';
 import { useTitle } from '../hooks/useTitle';
-import { datas } from '../datas/index';
+import { Datas } from '../datas/index';
 import { useToggleTheme } from '../hooks/useToggleTheme';
 import { NavbarContext } from '../context/navbar.context';
 import { useContext } from 'react';
@@ -56,9 +56,9 @@ const Layout: FC<Props> = ({ children }) => {
     <>
       <Head>
         <title>
-          {datas.siteTitle} | {title}
+          {Datas.siteTitle} | {title}
         </title>
-        <meta name="description" content={datas.siteDescription} />
+        <meta name="description" content={Datas.siteDescription} />
         <link rel="manifest" href="/manifest.json" />
       </Head>
       <div

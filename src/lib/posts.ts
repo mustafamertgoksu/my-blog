@@ -4,7 +4,7 @@ import matter from 'gray-matter';
 
 const root = path.join(process.cwd(), 'src', 'pages', 'content');
 
-export const getPostMeta = (slug: any) => {
+export const getPostMeta = (slug: string) => {
   const realSlug = slug.replace(/\.mdx$/, '');
   const filePath = path.join(root, `${realSlug}.mdx`);
   const fileContent = fs.readFileSync(filePath, { encoding: "utf8" });

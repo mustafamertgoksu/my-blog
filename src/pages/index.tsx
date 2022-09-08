@@ -8,7 +8,7 @@ import Techs from '../components/techs';
 import { getAllPosts } from '../lib/posts';
 import Link from 'next/link';
 import Title from '../components/title';
-import AboutSection from '../components/aboutSection';
+import AboutSection from '../components/about-section';
 import { PostType } from '../types/postType';
 
 type Props = {
