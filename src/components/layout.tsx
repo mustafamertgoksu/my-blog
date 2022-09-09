@@ -22,7 +22,7 @@ const ScrollTopButton = styled.a`
   top: 0;
   right: 0;
   bottom: 8%;
-  background-color: rgb(30 41 59);
+  background-color: rgb(20 30 40);
   border: none;
   padding: 1rem;
   border-radius: 50%;

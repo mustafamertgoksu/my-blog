@@ -3,7 +3,8 @@
 }
 
 .techCard {
-  @apply border flex my-2 items-center py-2 px-6 select-none cursor-pointer rounded-md opacity-80 bg-zinc-900;
+  @apply border-black flex my-2 items-center py-2 px-6 select-none cursor-pointer rounded-md opacity-80;
+  background-color: rgb(19, 21, 22);
 }
 
 .lightTechCard {
@@ -11,7 +12,7 @@
 }
 
 .techCard:hover {
-  @apply border flex my-2 items-center py-2 px-6 select-none cursor-pointer rounded-md opacity-95;
+  @apply border-black flex my-2 items-center py-2 px-6 select-none cursor-pointer rounded-md opacity-95;
 }
 
 .techName {

@@ -3,7 +3,7 @@
 }
 
 .aboutCard {
-  @apply bg-[#111] w-96 h-80 my-6 text-[1.450rem] rounded px-8 py-5 text-white opacity-70 transition-all
+  @apply bg-[#111] w-96 h-80 my-6 text-[1.450rem] rounded px-8 py-5 text-white opacity-80 transition-all
 }
 
 .lightAboutCard {
@@ -35,7 +35,7 @@
 }
 
 .aboutCard:hover {
-  @apply w-96 my-6 h-80 text-[1.450rem] rounded px-8 py-5 text-white opacity-60 scale-110
+  @apply w-96 my-6 h-80 text-[1.450rem] rounded px-8 py-5 text-white opacity-70 scale-110
 }
 
 .lightAboutCard::after {

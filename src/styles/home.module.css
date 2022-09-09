@@ -3,7 +3,8 @@
 }
 
 .postCard {
-  @apply cursor-pointer flex flex-col items-center justify-center bg-[#111] w-[26rem] h-[7.5rem] opacity-80 hover:opacity-95 my-2 rounded
+  @apply cursor-pointer flex flex-col items-center justify-center w-[26rem] h-[7.5rem] opacity-100 hover:opacity-95 my-2 rounded;
+  background-color: rgb(13, 14, 14); 
 }
 
 .lightPostCard {

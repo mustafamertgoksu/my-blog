@@ -9,8 +9,9 @@
 }
 
 .scrolledNav {
-  @apply w-full h-14 py-4 flex items-center justify-evenly sticky top-0 bg-[#001020] opacity-100;
+  @apply w-full h-14 py-4 flex items-center justify-evenly sticky top-0 opacity-100;
     z-index: 999;
+    background-color: rgb(10, 15, 24);
 }
 
 .scrolledLightNavbar {
@@ -70,7 +71,7 @@
 }
 
 .navLink {
-  @apply text-white mx-2 px-4 py-3 opacity-90 transition-all hover:bg-slate-800 rounded cursor-pointer;
+  @apply text-white mx-2 px-4 py-3 opacity-90 transition-all hover:bg-slate-900 rounded cursor-pointer;
 }
 
 .lightNavLink {
@@ -88,7 +89,8 @@
 }
 
 .modeToggleBtn {
-  @apply bg-slate-300 px-2 py-2 rounded text-xl
+  @apply px-2 py-2 rounded text-xl text-white;
+  background-color: rgb(47, 51, 53);
 }
 
 .lightModeToggleBtn {
@@ -108,5 +110,6 @@
 }
 
 .showNav {
-  @apply flex flex-col bg-slate-700 px-10 py-6 text-white rounded absolute left-4 top-16 opacity-95;
+  @apply flex flex-col px-10 py-6 text-white rounded absolute left-4 top-16 opacity-95;
+  background-color: rgb(41, 52, 68);
 }

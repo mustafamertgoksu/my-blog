@@ -1,5 +1,6 @@
 .contact {
-  @apply border p-4 border-gray-400 shadow-slate-800 shadow-lg flex flex-col rounded-md w-2/3 bg-slate-900;
+  @apply border p-4 border-gray-400 shadow-slate-800 shadow-lg flex flex-col rounded-md w-2/3;
+  background-color: rgb(9, 13, 25);
 }
 
 .lightContact {

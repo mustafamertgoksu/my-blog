@@ -1,6 +1,7 @@
 .wrapper {
-  @apply h-full w-full bg-slate-900 flex flex-col items-center overflow-auto scroll-smooth;
+  @apply h-full w-full flex flex-col items-center overflow-auto scroll-smooth;
   font-family: 'Montserrat', sans-serif;
+  background-color: rgb(9, 10, 20);
 }
 
 .lightWrapper {
