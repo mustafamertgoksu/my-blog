@@ -21,17 +21,19 @@ const About: NextPage = () => {
       <AboutSection />
       <section className={styles.myLinks}>
         <Title>My Links</Title>
-        {SocialLinks.map((socialLink) => (
-          <a
-            className={
-              !isLightMode ? styles.socialLink : styles.lightSocialLink
-            }
-            href={socialLink.link}
-          >
-            <Image src={socialLink.image} width="32" height="32" />
-            <span className={'text-gray-50'}>{socialLink.name}</span>
-          </a>
-        ))}
+        <div className={styles.links}>
+          {SocialLinks.map((socialLink) => (
+            <a
+              className={
+                !isLightMode ? styles.socialLink : styles.lightSocialLink
+              }
+              href={socialLink.link}
+            >
+              <Image src={socialLink.image} width="32" height="32" />
+              <span className={'text-gray-50'}>{socialLink.name}</span>
+            </a>
+          ))}
+        </div>
       </section>
       <section className={styles.contact}>
         <Title>Contact Me</Title>
