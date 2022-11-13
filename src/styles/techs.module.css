@@ -30,6 +30,9 @@
   .techCard {
     @apply justify-center
   }
+  .lightTechCard {
+    @apply justify-center
+  }
   .lightTechName {
     @apply hidden
   }
