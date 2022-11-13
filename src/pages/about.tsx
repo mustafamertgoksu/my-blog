@@ -29,7 +29,7 @@ const About: NextPage = () => {
               }
               href={socialLink.link}
             >
-              <Image src={socialLink.image} width="32" height="32" />
+              <Image src={socialLink.image} width="32" height="32" alt={socialLink.name} />
               <span className={'text-gray-50'}>{socialLink.name}</span>
             </a>
           ))}

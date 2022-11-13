@@ -38,16 +38,16 @@ const Navbar = () => {
         </button>
         <nav className={navVisibility ? styles.showNav : styles.hiddenNav}>
           <Link className={styles.hiddenNavItem} href="/">
-            <a>Home</a>
+            Home
           </Link>
           <Link className={styles.hiddenNavItem} href="/about">
-            <a>About</a>
+            About
           </Link>
           <Link className={styles.hiddenNavItem} href="/projects">
-            <a>Projects</a>
+            Projects
           </Link>
           <Link className={styles.hiddenNavItem} href="/travel">
-            <a>Travel</a>
+            Travel
           </Link>
         </nav>
       </div>
@@ -58,28 +58,28 @@ const Navbar = () => {
               className={isLightMode ? styles.lightNavLink : styles.navLink}
             >
               <Link href="/">
-                <a>Home</a>
+                Home
               </Link>
             </span>
             <span
               className={isLightMode ? styles.lightNavLink : styles.navLink}
             >
               <Link href="/about">
-                <a>About</a>
+                About
               </Link>
             </span>
             <span
               className={isLightMode ? styles.lightNavLink : styles.navLink}
             >
               <Link href="/projects">
-                <a>Projects</a>
+                Projects
               </Link>
             </span>
             <span
               className={isLightMode ? styles.lightNavLink : styles.navLink}
             >
               <Link href="/travel">
-                <a>Travel</a>
+                Travel
               </Link>
             </span>
           </li>
