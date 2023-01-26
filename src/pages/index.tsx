@@ -4,12 +4,15 @@ import { useTitle } from '../hooks/useTitle';
 import styles from '../styles/home.module.css';
 import { useToggleTheme } from '../hooks/useToggleTheme';
 import Image from 'next/image';
-import Techs from '../components/techs';
 import { getAllPosts } from '../lib/posts';
 import Link from 'next/link';
 import Title from '../components/title';
-import AboutSection from '../components/about-section';
 import { PostType } from '../types/postType';
+import Typewriter from 'typewriter-effect';
+import TypewriterComponent from 'typewriter-effect';
+import { Datas } from '../datas';
+import Contact from '../components/contact';
+
 
 type Props = {
   posts: PostType[];
@@ -28,13 +31,18 @@ const Home: NextPage<Props> = ({ posts }) => {
 
   return (
     <div className="container">
-      <AboutSection />
-      <section className={styles.techs}>
-        <Title
-        >
-          Technologies i use
-        </Title>
-        <Techs />
+      <section className={"w-full flex flex-col items-center"}>
+      <h2 className={!isLightMode ? styles.siteTitle : styles.lightSiteTitle}>
+        👋 Hey, {"I'm"}&nbsp;
+        <div>
+          <TypewriterComponent
+            onInit={(typeWriter) =>
+              typeWriter.typeString(Datas.siteTitle).start()
+            }
+          />
+        </div>
+      </h2>
+      <p className={!isLightMode ? "text-center text-slate-400 cursor-default select-none mb-3 text-xl font-bold" : "text-center text-black cursor-default select-none mb-5 font-bold text-xl"}> I'm introduce myself at <Link href={"/about"} className={!isLightMode ? "text-green-400" : "text-green-800"}>About</Link> page </p>
       </section>
       <section className={styles.posts}>
         <Title
@@ -68,6 +76,10 @@ const Home: NextPage<Props> = ({ posts }) => {
             </Link>
           </div>
         ))}
+      </section>
+      <section className={styles.contact}>
+        <Title>Contact Me</Title>
+        <Contact />
       </section>
     </div>
   );

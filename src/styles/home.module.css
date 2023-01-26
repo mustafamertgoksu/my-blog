@@ -1,5 +1,5 @@
 .posts {
-  @apply w-full flex flex-col items-center my-12
+  @apply w-full flex flex-col items-center my-3
 }
 
 .postCard {
@@ -32,24 +32,50 @@
   }
 }
 
-.techs {
-  @apply px-24
+.siteTitle {
+  @apply flex text-3xl text-neutral-300 opacity-70 mb-5
 }
 
-@media(max-width: 620px) {
-  .techs {
-    @apply px-10
+.lightSiteTitle {
+  @apply flex text-3xl text-black opacity-90 mb-5
+}
+
+@media(max-width: 768px) {
+  .siteTitle {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .lightSiteTitle {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 
-@media(max-width: 500px) {
-  .techs {
-    @apply px-4
+@media(max-width: 400px) {
+  .siteTitle {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+  }
+
+  .lightSiteTitle {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
   }
 }
 
-@media(max-width: 410px) {
-  .techs {
-    @apply px-1
+@media(max-width: 345px) {
+  .siteTitle {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
   }
+
+  .lightSiteTitle {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+  }
+}
+
+.contact {
+  @apply flex flex-col  items-center
 }

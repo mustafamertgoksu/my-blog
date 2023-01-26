@@ -5,9 +5,10 @@ import { useToggleTheme } from '../hooks/useToggleTheme';
 import styles from '../styles/about.module.css';
 import { SocialLinks } from '../datas';
 import Image from 'next/image';
-import Contact from '../components/contact';
 import Title from '../components/title';
 import AboutSection from '../components/about-section';
+import Techs from '../components/techs';
+
 
 const About: NextPage = () => {
   const { setTitle } = useTitle();
@@ -19,6 +20,13 @@ const About: NextPage = () => {
   return (
     <div className="container">
       <AboutSection />
+      <section className={styles.techs}>
+        <Title
+        >
+          Technologies i use
+        </Title>
+        <Techs />
+      </section>
       <section className={styles.myLinks}>
         <Title>My Links</Title>
         <div className={styles.links}>
@@ -34,10 +42,6 @@ const About: NextPage = () => {
             </a>
           ))}
         </div>
-      </section>
-      <section className={styles.contact}>
-        <Title>Contact Me</Title>
-        <Contact />
       </section>
     </div>
   );
