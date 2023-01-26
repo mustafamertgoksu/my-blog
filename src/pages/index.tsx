@@ -17,10 +17,15 @@ type Props = {
 
 const Home: NextPage<Props> = ({ posts }) => {
   const { setTitle } = useTitle();
-  const { isLightMode } = useToggleTheme();
+  const { isLightMode, toggleTheme } = useToggleTheme();
   useEffect(() => {
     setTitle('Home');
   }, []);
+
+  const contentTheme = () => {
+    isLightMode ? toggleTheme() : null
+  }
+
   return (
     <div className="container">
       <AboutSection />
@@ -37,7 +42,7 @@ const Home: NextPage<Props> = ({ posts }) => {
           Recent Blog Posts
         </Title>
         {posts.map((post, index: React.Key) => (
-          <div key={index}>
+          <div key={index} onClick={contentTheme}>
             <Link href={`/content/${post.slug}`}>
               <div
                 className={

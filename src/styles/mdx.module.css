@@ -12,28 +12,32 @@
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  color: #34833d;
+  @apply
+   text-green-400
+     hover:border-b-2
+     hover:border-solid
+   hover:border-green-400 cursor-default transition-all
 }
 
 .mdxContainer h2 {
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  color: #34833d;
+  @apply cursor-default text-blue-400 transition-all
 }
 
 .mdxContainer h3 {
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  color: #3d6263;
+  @apply text-slate-300
 }
 
 .mdxContainer h3 p {
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  color: #3d6263;
+  @apply text-slate-300
 }
 
 .mdxContainer p {
@@ -48,13 +52,13 @@
 }
 
 .example {
-  @apply text-slate-500 text-2xl my-6
+  @apply text-slate-300 text-2xl my-6
 }
 
 /* Syntax Higlight */
 
 .mdxContainer pre {
-  @apply bg-neutral-800 text-white;
+  @apply bg-neutral-900 text-lime-400;
   border-radius: 4px;
   padding: 1rem;
   overflow-x: auto;
