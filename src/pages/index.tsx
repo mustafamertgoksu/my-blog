@@ -42,7 +42,7 @@ const Home: NextPage<Props> = ({ posts }) => {
           />
         </div>
       </h2>
-      <p className={!isLightMode ? "text-center text-slate-400 cursor-default select-none mb-3 text-xl font-bold" : "text-center text-black cursor-default select-none mb-5 font-bold text-xl"}> I'm introduce myself at <Link href={"/about"} className={!isLightMode ? "text-green-400" : "text-green-800"}>About</Link> page </p>
+      <p className={!isLightMode ? "text-center text-slate-400 cursor-default select-none mb-3 text-xl font-bold" : "text-center text-black cursor-default select-none mb-5 font-bold text-xl"}> I'm introduce myself at <Link href={"/about"} className={!isLightMode ? "text-green-400 hover:opacity-95 transition-all hover:underline " : "text-green-600"}>About</Link> page </p>
       </section>
       <section className={styles.posts}>
         <Title

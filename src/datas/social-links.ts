@@ -25,8 +25,8 @@ export const SocialLinks: LinksType[] = [
     image: '/images/spotify.svg',
   },
   {
-    name: 'Chess.com',
-    link: 'https://www.chess.com/member/mustafamertgoksuchess',
+    name: 'Lichess',
+    link: 'https://lichess.org/@/hvjyg',
     color: '#000',
     image: '/images/chess.svg',
   },
