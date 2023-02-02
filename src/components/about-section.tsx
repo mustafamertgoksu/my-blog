@@ -1,8 +1,8 @@
-import Typewriter from 'typewriter-effect';
-import TypewriterComponent from 'typewriter-effect';
-import { Datas } from '../datas';
-import styles from '../styles/about.module.css';
-import { useToggleTheme } from '../hooks/useToggleTheme';
+import Typewriter from "typewriter-effect";
+import TypewriterComponent from "typewriter-effect";
+import { Datas } from "../datas";
+import styles from "../styles/about.module.css";
+import { useToggleTheme } from "../hooks/useToggleTheme";
 
 const AboutSection = () => {
   const { isLightMode } = useToggleTheme();
@@ -21,8 +21,8 @@ const AboutSection = () => {
       <h2
         className={
           !isLightMode
-            ? 'my-5 text-2xl text-green-600'
-            : 'my-5 text-2xl text-green-900'
+            ? "my-5 text-2xl text-green-600"
+            : "my-5 text-2xl text-green-900"
         }
       >
         Who Am I?

@@ -1,7 +1,7 @@
-import { TechsIcons } from '../datas';
-import Image from 'next/image';
-import { useToggleTheme } from '../hooks/useToggleTheme';
-import styles from '../styles/techs.module.css';
+import { TechsIcons } from "../datas";
+import Image from "next/image";
+import { useToggleTheme } from "../hooks/useToggleTheme";
+import styles from "../styles/techs.module.css";
 
 const Techs = () => {
   const { isLightMode } = useToggleTheme();
@@ -17,8 +17,8 @@ const Techs = () => {
               <Image
                 src={
                   isLightMode
-                    ? '/images/nextdotjs.svg'
-                    : '/images/nextdotjslight.svg'
+                    ? "/images/nextdotjs.svg"
+                    : "/images/nextdotjslight.svg"
                 }
                 alt={tech.name}
                 width="30"
@@ -39,12 +39,7 @@ const Techs = () => {
             className={!isLightMode ? styles.techCard : styles.lightTechCard}
             key={index}
           >
-            <Image
-              src={tech.image}
-              width="30"
-              height="30"
-              alt={tech.name}
-            />
+            <Image src={tech.image} width="30" height="30" alt={tech.name} />
             <span
               className={!isLightMode ? styles.techName : styles.lightTechName}
             >

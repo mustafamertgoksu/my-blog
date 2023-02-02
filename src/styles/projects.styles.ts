@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const StyledProjects = styled.div`
   width: 100%;
@@ -7,7 +7,7 @@ export const StyledProjects = styled.div`
   align-items: center;
   flex-direction: column;
   padding: 2rem 1rem;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   .projects-container {
     display: flex;
     flex-direction: column;

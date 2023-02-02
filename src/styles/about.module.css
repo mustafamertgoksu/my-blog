@@ -1,5 +1,5 @@
 .aboutSection {
-  @apply w-full flex flex-col items-center my-12;
+  @apply w-full flex flex-col items-center my-2;
 }
 
 .aboutCard {

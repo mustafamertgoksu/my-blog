@@ -8,7 +8,8 @@ import { NavbarContext } from "../context/navbar.context";
 
 const Navbar = () => {
   const { toggleTheme, isLightMode } = useToggleTheme();
-  const { navScroll, navVisibility, setNavVisibility } = useContext(NavbarContext);
+  const { navScroll, navVisibility, setNavVisibility } =
+    useContext(NavbarContext);
 
   const toggleNav = () => {
     if (!navVisibility) {
@@ -57,30 +58,22 @@ const Navbar = () => {
             <span
               className={isLightMode ? styles.lightNavLink : styles.navLink}
             >
-              <Link href="/">
-                Home
-              </Link>
+              <Link href="/">Home</Link>
             </span>
             <span
               className={isLightMode ? styles.lightNavLink : styles.navLink}
             >
-              <Link href="/about">
-                About
-              </Link>
+              <Link href="/about">About</Link>
             </span>
             <span
               className={isLightMode ? styles.lightNavLink : styles.navLink}
             >
-              <Link href="/projects">
-                Projects
-              </Link>
+              <Link href="/projects">Projects</Link>
             </span>
             <span
               className={isLightMode ? styles.lightNavLink : styles.navLink}
             >
-              <Link href="/travel">
-                Travel
-              </Link>
+              <Link href="/travel">Travel</Link>
             </span>
           </li>
         </ul>

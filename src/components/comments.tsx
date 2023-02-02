@@ -1,6 +1,6 @@
-import Giscus from '@giscus/react';
-import styles from '../styles/comments.module.css';
-import { useToggleTheme } from '../hooks/useToggleTheme';
+import Giscus from "@giscus/react";
+import styles from "../styles/comments.module.css";
+import { useToggleTheme } from "../hooks/useToggleTheme";
 
 const Comments = () => {
   return (

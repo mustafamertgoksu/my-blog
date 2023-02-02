@@ -1,6 +1,6 @@
-import { useToggleTheme } from '../hooks/useToggleTheme';
-import { FC } from 'react';
-import styles from '../styles/title.module.css';
+import { useToggleTheme } from "../hooks/useToggleTheme";
+import { FC } from "react";
+import styles from "../styles/title.module.css";
 
 type Props = {
   children: React.ReactNode;

@@ -1,8 +1,8 @@
-import { SubmitHandler, useForm } from 'react-hook-form';
-import { useRouter } from 'next/router';
-import { useToggleTheme } from '../hooks/useToggleTheme';
+import { SubmitHandler, useForm } from "react-hook-form";
+import { useRouter } from "next/router";
+import { useToggleTheme } from "../hooks/useToggleTheme";
 
-import styles from '../styles/contact.module.css';
+import styles from "../styles/contact.module.css";
 
 interface Inputs {
   email: string;
@@ -38,7 +38,7 @@ const Contact: React.FC = () => {
         id="contact-email"
         className={!isLightMode ? styles.input : styles.lightInput}
         placeholder="you@mail.com"
-        {...register('email', { required: true })}
+        {...register("email", { required: true })}
       />
       <label
         htmlFor="contact-name"
@@ -51,7 +51,7 @@ const Contact: React.FC = () => {
         id="contact-name"
         className={!isLightMode ? styles.input : styles.lightInput}
         placeholder="John Doe"
-        {...register('name', { required: false })}
+        {...register("name", { required: false })}
       />
       <label
         htmlFor="contact-message"
@@ -64,7 +64,7 @@ const Contact: React.FC = () => {
         id="contact-message"
         className={!isLightMode ? styles.textarea : styles.lightTextarea}
         placeholder="Hello Mustafa! bla bla bla ..."
-        {...register('message', { required: true })}
+        {...register("message", { required: true })}
       />
       <button
         type="submit"

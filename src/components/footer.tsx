@@ -1,12 +1,12 @@
-import { useToggleTheme } from '../hooks/useToggleTheme';
-import styles from '../styles/footer.module.css';
+import { useToggleTheme } from "../hooks/useToggleTheme";
+import styles from "../styles/footer.module.css";
 
 const Footer = () => {
   const { isLightMode } = useToggleTheme();
   return (
     <footer className="w-full flex flex-col items-center">
       <h2 className={!isLightMode ? styles.footerText : styles.lightFooterText}>
-        <span className={styles.spanFirst}>&copy;</span> Made with ❤️ by{' '}
+        <span className={styles.spanFirst}>&copy;</span> Made with ❤️ by{" "}
         <span
           className={!isLightMode ? styles.spanSecond : styles.lightSpanSecond}
         >
@@ -15,10 +15,10 @@ const Footer = () => {
             target="blank"
             rel="noreferrer"
           >
-            Mustafa Mert Goksu{' '}
+            Mustafa Mert Goksu{" "}
           </a>
         </span>
-        using{' '}
+        using{" "}
         <span
           className={!isLightMode ? styles.spanThird : styles.lightSpanThird}
         >
