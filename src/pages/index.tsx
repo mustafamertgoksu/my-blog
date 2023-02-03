@@ -18,6 +18,9 @@ type Props = {
 
 const Home: NextPage<Props> = ({ posts }) => {
   const { isLightMode, toggleTheme } = useToggleTheme();
+  const contentTheme = () => {
+    isLightMode ? toggleTheme() : null
+  }
   return (
     <>
       <Head>
@@ -62,7 +65,7 @@ const Home: NextPage<Props> = ({ posts }) => {
         <section className={styles.posts}>
           <Title>Recent Blog Posts</Title>
           {posts.map((post, index: React.Key) => (
-            <div key={index}>
+            <div key={index} onClick={contentTheme}>
               <Link href={`/content/${post.slug}`}>
                 <div
                   className={

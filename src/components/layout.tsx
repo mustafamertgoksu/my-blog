@@ -7,6 +7,7 @@ import { NavbarContext } from "../context/navbar.context";
 import { useContext } from "react";
 import styled from "styled-components";
 import { AiOutlineArrowUp } from "react-icons/ai";
+import { useRouter } from "next/router";
 
 const Main = styled.main`
   width: 100%;
@@ -45,9 +46,13 @@ const Layout: FC<Props> = ({ children }) => {
       setScrollIcon(false);
     }
   };
+
+  const router = useRouter();
+
   useEffect(() => {
     setNavVisibility(false);
-  }, []);
+  }, [router.pathname])
+
   return (
     <div
       className={isLightMode ? styles.lightWrapper : styles.wrapper}
