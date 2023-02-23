@@ -26,7 +26,7 @@ export const SocialLinks: LinksType[] = [
   },
   {
     name: "Lichess",
-    link: "https://lichess.org/@/hvjyg",
+    link: "https://lichess.org/@/mustafamertgoksu",
     color: "#000",
     image: "/images/chess.svg",
   },
