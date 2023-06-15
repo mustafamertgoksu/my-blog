@@ -24,10 +24,10 @@ const Home: NextPage<Props> = ({ posts }) => {
   return (
     <>
       <Head>
-        <title>{Datas.siteTitle} | Home</title>
+        <title>{`${Datas.siteTitle} | Home`}</title>
       </Head>
       <div className="container">
-        <section className={"w-full flex flex-col items-center my-2"}>
+        <section className={'w-full flex flex-col items-center my-2'}>
           <h2
             className={!isLightMode ? styles.siteTitle : styles.lightSiteTitle}
           >
@@ -43,23 +43,23 @@ const Home: NextPage<Props> = ({ posts }) => {
           <p
             className={
               !isLightMode
-                ? "text-center text-slate-400 cursor-default select-none mb-3 text-xl font-bold"
-                : "text-center text-black cursor-default select-none mb-5 font-bold text-xl"
+                ? 'text-center text-slate-400 cursor-default select-none mb-3 text-xl font-bold'
+                : 'text-center text-black cursor-default select-none mb-5 font-bold text-xl'
             }
           >
-            {" "}
-            I'm introduce myself at{" "}
+            {' '}
+            I'm introduce myself at{' '}
             <Link
-              href={"/about"}
+              href={'/about'}
               className={
                 !isLightMode
-                  ? "text-green-400 hover:opacity-95 transition-all hover:underline "
-                  : "text-green-600"
+                  ? 'text-green-400 hover:opacity-95 transition-all hover:underline '
+                  : 'text-green-600'
               }
             >
               About
-            </Link>{" "}
-            page{" "}
+            </Link>{' '}
+            page{' '}
           </p>
         </section>
         <section className={styles.posts}>

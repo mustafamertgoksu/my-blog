@@ -8,14 +8,14 @@ const Travel: NextPage = () => {
   return (
     <>
       <Head>
-        <title>{Datas.siteTitle} | Travel</title>
+        <title>{`${Datas.siteTitle} | Travel`}</title>
       </Head>
       <main className="container">
         <h1
           className={
             !isLightMode
-              ? "text-center my-3 text-3xl text-white"
-              : "text-center my-3 text-3xl text-black"
+              ? 'text-center my-3 text-3xl text-white'
+              : 'text-center my-3 text-3xl text-black'
           }
         >
           Travel
@@ -23,8 +23,8 @@ const Travel: NextPage = () => {
         <h3
           className={
             !isLightMode
-              ? "text-center my-3 text-2xl text-white"
-              : "text-center my-3 text-2xl text-black"
+              ? 'text-center my-3 text-2xl text-white'
+              : 'text-center my-3 text-2xl text-black'
           }
         >
           As Soon
