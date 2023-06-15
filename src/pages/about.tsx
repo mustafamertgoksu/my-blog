@@ -14,7 +14,7 @@ const About: NextPage = () => {
   return (
     <>
       <Head>
-        <title>{Datas.siteTitle} | About</title>
+        <title>{`${Datas.siteTitle} | About`}</title>
       </Head>
       <div className="container">
         <AboutSection />
@@ -25,12 +25,13 @@ const About: NextPage = () => {
         <section className={styles.myLinks}>
           <Title>My Links</Title>
           <div className={styles.links}>
-            {SocialLinks.map((socialLink) => (
+            {SocialLinks.map((socialLink, index) => (
               <a
                 className={
                   !isLightMode ? styles.socialLink : styles.lightSocialLink
                 }
                 href={socialLink.link}
+                key={index}
               >
                 <Image
                   src={socialLink.image}
@@ -38,7 +39,7 @@ const About: NextPage = () => {
                   height="32"
                   alt={socialLink.name}
                 />
-                <span className={"text-gray-50"}>{socialLink.name}</span>
+                <span className={'text-gray-50'}>{socialLink.name}</span>
               </a>
             ))}
           </div>

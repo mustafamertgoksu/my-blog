@@ -51,7 +51,7 @@ const Layout: FC<Props> = ({ children }) => {
 
   useEffect(() => {
     setNavVisibility(false);
-  }, [router.pathname])
+  }, [router.pathname]);
 
   return (
     <div
