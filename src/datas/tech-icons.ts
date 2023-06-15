@@ -68,26 +68,6 @@ export const TechsIcons: IconsType[] = [
     color: "#339933",
   },
   {
-    name: "Nest",
-    image: "/images/nestjs.svg",
-    color: "#E0234E",
-  },
-  {
-    name: "Jest",
-    image: "/images/jest.svg",
-    color: "#C21325",
-  },
-  {
-    name: "GraphQL",
-    image: "/images/graphql.svg",
-    color: "#E10098",
-  },
-  {
-    name: "PostgreSQL",
-    image: "/images/postgresql.svg",
-    color: "#4169E1",
-  },
-  {
     name: "Git",
     image: "/images/git.svg",
     color: "#F05032",
