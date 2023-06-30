@@ -40,6 +40,13 @@ const Home: NextPage<Props> = ({ posts }) => {
               />
             </div>
           </h2>
+          <Image
+            src="/images/react-profile.gif"
+            alt="profile image"
+            width="100"
+            height="100"
+            className="rounded-full mb-5"
+          />
           <p
             className={
               !isLightMode
