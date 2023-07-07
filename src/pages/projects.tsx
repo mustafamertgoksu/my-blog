@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 import { useToggleTheme } from "../hooks/useToggleTheme";
 import { GithubRepositoriesURL } from "../datas";
-import { useState, useEffect } from "react";
 import { AiFillStar } from "react-icons/ai";
 import { BsGithub } from "react-icons/bs";
 import { SiJavascript } from "react-icons/si";
@@ -17,12 +16,6 @@ type Props = {
 
 const Projects: NextPage<Props> = ({ repos }) => {
   const { isLightMode } = useToggleTheme();
-
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setLoading(false);
-  }, []);
   return (
     <>
       <Head>
