@@ -55,7 +55,7 @@ const Home: NextPage<Props> = ({ posts }) => {
             }
           >
             {' '}
-            I'm introduce myself at{' '}
+            I'm introducing myself at{' '}
             <Link
               href={'/about'}
               className={
